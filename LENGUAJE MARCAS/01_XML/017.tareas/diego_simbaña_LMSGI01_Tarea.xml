@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE agenda [
+    <!ELEMENT ejemplo ANY >
+  ]>
+<!-- Ejercicio 1
+
+  Diseñar un documento válido en XML que permita estructurar la información de una agenda de teléfonos, 
+  suponer que la información que podemos tener de una persona es su nombre y apellidos, su dirección 
+  y sus teléfonos, que pueden ser el teléfono de casa, el móvil y el teléfono del trabajo. 
+  La dirección constará de calle, número, Población y código postal.
+
+  La valoración de este ejercicio será Apto/No apto.
+
+  Tiempo de resolución aproximado: 0,5 h. -->
+
+<agenda>
+  <persona n="1">
+    <nombre>Diego</nombre>
+    <apellido>Simbaña</apellido>
+    <direccion>
+      <calle>Rocafort</calle>
+      <numero>22</numero>
+      <poblacion>Madrid</poblacion>
+      <codpostal>28001</codpostal>
+    </direccion>
+    <telefono>
+      <casa>9112345678</casa>
+      <movil>678654321</movil>
+      <trabajo>912345678</trabajo>
+    </telefono>
+    <email>diegosimbana@xyz.com</email>
+  </persona>
+</agenda>

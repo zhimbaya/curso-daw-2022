@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+
+  
+  <rect width="150" height="30"  fill="red" stroke="red" stroke-width="1"/>
+  <rect x="0" y="30" width="150" height="40" fill="yellow"/>
+  <rect x="0" y="60" width="150" height="30" fill="red"/>
+ <polyline points="0,90, 10,90, 10,40, 40,10, 50,20, 50,10, 60,10, 60,30, 70,40, 70,90, 80,90" fill="none" stroke="black" stroke-width="3"/>
+ <text x="20" y="50" rotate="17 0 -9 11 10 -3" fill="red" stroke="black" stroke-width="2">
+  ¡Qué viva España!
+</text>
+
+</svg>
