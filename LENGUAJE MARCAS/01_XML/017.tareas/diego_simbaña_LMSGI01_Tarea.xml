@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE agenda [
-    <!ELEMENT ejemplo ANY >
-  ]>
+<!DOCTYPE personas [
+    <!ENTITY yo "Diego Armando">
+    <!ELEMENT personas (persona*)>
+    <!ELEMENT persona (nombre, apellido, direccion, telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT direccion ANY>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT poblacion (#PCDATA)>
+    <!ELEMENT codpostal (#PCDATA)>
+    <!ELEMENT telefono (casa, movil, trabajo)>
+    <!ELEMENT casa (#PCDATA)>
+    <!ELEMENT movil (#PCDATA)>
+    <!ELEMENT trabajo (#PCDATA)>
+]>
 <!-- Ejercicio 1
 
   Diseñar un documento válido en XML que permita estructurar la información de una agenda de teléfonos, 
@@ -13,9 +26,9 @@
 
   Tiempo de resolución aproximado: 0,5 h. -->
 
-<agenda>
+<personas>
   <persona n="1">
-    <nombre>Diego</nombre>
+    <nombre>&yo;</nombre>
     <apellido>Simbaña</apellido>
     <direccion>
       <calle>Rocafort</calle>
@@ -28,6 +41,5 @@
       <movil>678654321</movil>
       <trabajo>912345678</trabajo>
     </telefono>
-    <email>diegosimbana@xyz.com</email>
   </persona>
-</agenda>
+</personas>
