@@ -1,0 +1,54 @@
+DFD
+https://aulavirtual32.educa.madrid.org/ies.lapaz.alcobendas/pluginfile.php/67653/mod_book/chapter/4204/DFD1.0.rar
+
+2. ActividadUT01-2: Usando DFD.
+
+Crea un diagrama de flujo básico que permita pasar una cantidad de euros a las antiguas pesetas. Debemos considerar que el cambio es de: 1€ equivale a 166,386 ptas.
+
+Haremos varias versiones, alguna de las cuales concatene al resultado, texto para que sea más fácil de comprender por el usuario.
+
+3. ActividadUT01-3: Usando DFD II.
+
+Crear un pequeño diagrama de flujo que, a través de un condicional, ofrezca al usuario la posibilidad de elegir en la conversión, de euros a pesetas, o de pesetas a euros, de forma que pueda darnos el cambio de una cantidad que se pedirá, acorde a la selección previa.
+
+Haz varias versiones, alguna de las cuales sea más sencilla y alguna otra más compleja, o que cubra más casuísticas.
+
+PSEINT
+https://sourceforge.net/projects/pseint/postdownload
+
+5. ActividadUT01-5: Usando PSeInt.
+
+Utilizando PSeInt, crea un sencillo pseudicódigo que permita sumar 2 números.
+
+6. ActividadUT01-6: Usando PSeInt II.
+
+Crear, utlizando PSeInt, el pseudocódigo que permite calcular el área de un rectángulo. Incorporar, para mejorar la experiencia de usuario, la concatenación de texto y números para describir los valores manejados.
+
+TAREA
+Crea a través de la aplicación PSeInt una calculadora de números a la cual se pasen como parámetros 2 operandos, y como operador, un símbolo correspondiente a la suma, resta, multiplicación o división.
+
+Algoritmo CalcualadoraSimple
+	Escribir "Intro operando1:"
+	Leer operando1
+	Escribir "Intro operando2:"
+	Leer operando2
+	
+	Repetir
+		Escribir "Intro operandor (+, -, *, /):"
+		Leer operador
+	Hasta Que (operador=='+' || operador=='-' ||operador=='*' ||operador=='/' )
+	
+	resultado<-0
+	Segun operador Hacer
+		'+':
+			resultado<-operando1+operando2
+		'-':
+			resultado<-operando1-operando2
+		'*':
+			resultado<-operando1*operando2
+		De Otro Modo:
+			resultado<-operando1/operando2
+	Fin Segun
+	
+	Escribir "Resultado: ", resultado
+FinAlgoritmo

@@ -1,0 +1,9 @@
+Algoritmo SUMA_DOS_NUMEROS
+	Escribir 'SUMA DE DOS DIGITOS'
+	Escribir 'INTRODUCIR EL PRIMER DIGITO'
+	Leer N1
+	Escribir 'INTRODUCIR EL SEGUNDO DIGITO'
+	Leer N2
+	SUMA<-N1+N2
+	Escribir 'EL RESULTADO ES: ', SUMA
+FinAlgoritmo
