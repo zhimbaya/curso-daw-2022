@@ -1,0 +1,110 @@
+Tarea para LMSGI02.
+Detalles de la tarea de esta unidad. Enunciado.
+
+    Diseñar una página web, en HTML5 y con estilos CSS, que muestre la siguiente receta de cocina. Deberá incluir una imagen con una foto de la receta. Al inicio de la receta se dará al usuario la opción de ir directamente a la elaboración de la receta o pasar por los ingredientes.
+
+    Sopa de cebolla (4 personas)
+
+    Ingredientes:
+
+        1 Kg. de cebollas.
+
+        2 l. de caldo de carne.
+
+        100 gr. mantequilla.
+
+        1 cucharada de harina.
+
+        100 gr. de queso emmental suizo o gruyére rallado.
+
+        Pan tostado en rebanadas.
+
+        Tomillo.
+
+        1 hoja de laurel.
+
+        Pimienta.
+
+     Proceso:
+
+        Pelar y partir las cebollas en rodajas finas.
+
+        Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén transparentes sin dorarse.
+
+        Añadir la harina sin dejar de remover.
+
+        Ponerlo en una cazuela con el caldo, el tomillo y el laurel.
+
+        Dejar cocer a fuego lento durante unos 15 minutos.
+
+        Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.
+
+
+    La valoración de este ejercicio será de un total de 4 puntos, 1 punto por utilizar la notación adecuada(Html5 y Css), 1 punto por definir y utilizar los elementos adecuados, 1 punto por el uso adecuado y amplio de las hojas de estilo, 1 punto la adecuada y amplia distribución de elementos Html.
+
+
+    Diseñar y codificar su propia página web personal en HTML5 y con estilos CSS. Debe aparecer cuáles son tus estudios, aficiones. Incluir, al menos, una fotografía y algún enlace a una página externa. La valoración de este ejercicio será de un total de 4 puntos, 1 punto por utilizar la notación adecuada(Html5 y Css), 1 punto por definir y utilizar los elementos adecuados, 1 punto por el uso adecuado y amplio de las hojas de estilo, 1 punto la adecuada y amplia distribución de elementos Html.
+
+
+    Crear un formulario en Html5 y Css que realice una petición de reserva de un hotel con las siguientes características:
+
+        Un campo para introducir cada uno de los siguientes datos: nombre, apellidos, teléfono de contacto, e-mail, número de noches. Todos obligatorios
+
+        Dos controles calendario desplegables para recoger la fecha de entrada (día/mes). Obligatorios
+
+        Un botón de radio para elegir entre habitación simple, doble o matrimonio. Por defecto,estará seleccionada la doble.
+
+        Un campo de selección múltiple (checkbox) que permita al usuario indicar si desea desayuno, comida, cena y/o cama supletoria.
+
+        Una caja de texto donde se puedan dejar comentarios.
+
+        Un botón para limpiar el formulario y otro para enviarlo por correo a la dirección: reservas@mihotel.com.
+
+     Maquetar el formulario según la tabla siguiente:
+
+     La valoración de este ejercicio será de un total de 2 puntos, 0,5 punto por utilizar la notación adecuada(Html5 y Css), 0,5 punto por definir y utilizar los elementos adecuados, 0,5 punto por el uso adecuado y amplio de las hojas de estilo, 0,5 punto la adecuada y amplia distribución de elementos Html.
+
+Criterios de puntuación. Total 10 puntos.
+
+La valoración total de la tarea es de 10 puntos repartidos del siguiente modo:
+
+EJERCICIO 1: 4 puntos.
+
+    Notación puntuación máxima 1 pto.
+
+    Uso de elementos y atributos puntuación máxima 1 pto.
+
+    Hojas de estilo puntuación máxima 1 pto.
+
+    Distribución de elementos y uso de formatos puntuación máxima 1 pto.
+
+EJERCICIO 2: 4 puntos.
+
+    Notación puntuación máxima 1 pto.
+
+    Uso de elementos y atributos puntuación máxima 1 pto.
+
+    Hojas de estilo puntuación máxima 1 pto.
+
+    Distribución de elementos y uso de formatos puntuación máxima 1 pto.
+
+EJERCICIO 3: 2 puntos.
+
+    Notación puntuación máxima 0'5 ptos.
+
+    Uso de elementos y atributos puntuación máxima 0'5 ptos.
+
+    Hojas de estilo puntuación máxima 0'5 ptos.
+
+    Distribución de elementos y uso de formatos puntuación máxima 0'5 ptos.
+
+Puesto que no existe una evaluación por unidades la evaluación se realiza en base a los criterios generales del módulo.
+Indicaciones de entrega.
+
+Una vez realizada la tarea elaborarás un archivo comprimido que contenga los archivos correspondientes a cada ejercicio identificados por el número de ejercicio. El envío se realizará a través de la plataforma de la forma establecida para ello, y el archivo se nombrará siguiendo las siguientes pautas:
+
+apellido1_apellido2_nombre_SIGxx_Tarea
+
+ Asegúrate que el nombre no contenga la letra ñ, tildes ni caracteres especiales extraños. Así por ejemplo la alumna Begoña Sánchez Mañas para la segunda unidad del MP de LMSGI, debería nombrar esta tarea como...
+
+sanchez_manas_begona_LMSGI02_Tarea
