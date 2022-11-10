@@ -6,141 +6,168 @@
     </head>
     
     <body>
-        <h3>Ejemplo de formulario: Matriculación en el DAW a distancia</h3>
+        <h1>Ejemplo de formulario: Matriculación en el DAW a distancia.</h1>
         <form action="matricula.php" method="get">
-            <b>Nombre:</b> <input type="text" name="Nombre"/ >
-            &nbsp;&nbsp;&nbsp;<b>Apellidos:</b> <input type="text" name="Apellidos"></input>
-            &nbsp;&nbsp;&nbsp;<b>Sexo:</b> <input type="radio" name="Sexo"/>M
-            <input type="radio" name="Sexo"/>H
-            
-            <br/><br/><b>Fecha de nacimiento:</b>
-            <select>
+            <fieldset>
+                <legend>Formulario</legend>
+            <label for="nombre"><b>Nombre:</b></label><input type="text" name="Nombre" id="nombre"/>
+            <label for="apellidos"><b>Apellidos:</b> </label><input type="text" name="Apellidos" id="apellidos"/>
+            <label><b>Sexo:</b></label>
+            <input type="radio" name="Sexo" id="mujer" value="M"/>
+                <label for="mujer">M</label>
+            <input type="radio" name="Sexo" id="hombre" value="H"/>
+                <label for="hombre">H</label><br><br>
+            <label for="fecha"><b>Fecha de nacimiento:</b></label>
+            <label for="dia"></label>
+            <select id="dia" name="dia">
                 <option>dia</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-                <option>25</option>
-                <option>26</option>
-                <option>27</option>
-                <option>28</option>
-                <option>29</option>
-                <option>30</option>
-                <option>31</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
             </select>
-            <select>
+            <label for="mes"></label>
+            <select select id="mes" name="mes">
                 <option>mes</option>
-                <option>Enero</option>
-                <option>Febrero</option>
-                <option>Marzo</option>
-                <option>Abril</option>
-                <option>Mayo</option>
-                <option>Junio</option>
-                <option>Julio</option>
-                <option>Agosto</option>
-                <option>Septiembre</option>
-                <option>Octubre</option>
-                <option>Noviembre</option>
-                <option>Diciembre</option>
-            </select>   
-            <select>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <option value="abril">Abril</option>
+                <option value="mayo">Mayo</option>
+                <option value="junio">Junio</option>
+                <option value="julio">Julio</option>
+                <option value="agosto">Agosto</option>
+                <option value="septiembre">Septiembre</option>
+                <option value="octubre">Octubre</option>
+                <option value="noviembre">Noviembre</option>
+                <option value="diciembre">Diciembre</option>
+            </select>
+            <label for="anio"></label>
+            <select id="anio" name="anio">
                 <option>año</option>
-                <option>1992</option>
-                <option>1991</option>
-                <option>1990</option>
-                <option>1989</option>
-                <option>1988</option>
-                <option>1987</option>
-                <option>1986</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
             </select>
             <br/>
-            <p><b>Escoge los módulos en los que te matriculas: </b></p>
+            <p><b>Escoge los módulos en los que te matriculas:</b></p>
             <table>  
                 <tr>
                     <td>
-                        <input type="checkbox" name="Modulos"/> Fundamentos de Hardware
+                        <input type="checkbox" name="Modulos" id="modulo1" value="FDH"/> 
+                        <label for="modulo1">Fundamentos de Hardware</label>
+                        
                     </td>
                     <td>
-                        <input type="checkbox" name="Modulos"/> Servicios de Red e Internet
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" name="Modulos"/>Gestión de Bases de Datos
-                    </td>
-                    <td>
-                        <input type="checkbox" name="Modulos"/>Administración de sistemas Operativos
+                        <input type="checkbox" name="Modulos" id="modulo2" value="SRI"/> 
+                        <label for="modulo2">Servicios de Red e Internet</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                       <input type="checkbox" name="Modulos"/>Implantación de Sistemas Operativos
+                        <input type="checkbox" name="Modulos" id="modulo3" value="GBD"/>
+                        <label for="modulo3">Gestión de Bases de Datos</label>
                     </td>
                     <td>
-                        <input type="checkbox" name="Modulos"/>Implantación de Aplicaciones Web
+                        <input type="checkbox" name="Modulos" id="modulo4" value="ASO"/>
+                        <label for="modulo4">Administración de sistemas Operativos</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="Modulos" id="modulo5" value="ISO"/>
+                       <label for="modulo5">Implantación de Sistemas Operativos</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Modulos" id="modulo6" value="IAW"/>  
+                        <label for="modulo6">Implantación de Aplicaciones Web</label>
                     </td>
                 </tr>
                 <tr>
                     <td>            
-                        <input type="checkbox" name="Modulos"/>Planificación y Administración de Redes
+                        <input type="checkbox" name="Modulos" id="modulo7" value="PAR"/>    
+                        <label for="modulo7">Planificación y Administración de Redes</label>
                     </td>
                     <td>
-                        <input type="checkbox" name="Modulos"/>Administración de Sistemas Gestores de Bases de Datos</input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" name="Modulos"/>Lenguajes de Marcas y Sistemas de Gestión de Información</input>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="Modulos"/>Seguridad y Alta Disponibilidad
+                        <input type="checkbox" name="Modulos" id="modulo8" value="ASGBD"/>   
+                        <label for="modulo8">Administración de Sistemas Gestores de Bases de Datos</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="Modulos"/>Formación y Orientación Laboral
+                        <input type="checkbox" name="Modulos" id="modulo9" value="LMS"/> 
+                        <label for="modulo9">Lenguajes de Marcas y Sistemas de Gestión de Información</label>
                     </td>
                     <td>
-                        <input type="checkbox" name="Modulos"/>Empresa e Iniciativa Emprendedora
+                        <input type="checkbox" name="Modulos" id="modulo10" value="LMS"/> 
+                        <label for="modulo10">Seguridad y Alta Disponibilidad</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="Modulos"/>Proyecto de Administración de Sistemas Informáticos en Red
+                        <input type="checkbox" name="Modulos" id="modulo11" value="FOL"/>  
+                        <label for="modulo11">Formación y Orientación Laboral</label>
                     </td>
                     <td>
-                        <input type="checkbox" name="Modulos"/>Formación en Centros de Trabajo
+                        <input type="checkbox" name="Modulos" id="modulo12" value="EIE"/>    
+                        <label for="modulo12">Empresa e Iniciativa Emprendedora</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="Modulos" id="modulo13" value="PASIR"/>     
+                        <label for="modulo13">Proyecto de Administración de Sistemas Informáticos en Red</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Modulos" id="modulo14" value="FCT"/>     
+                        <label for="modulo14">Formación en Centros de Trabajo</label>
                     </td>
                 </tr>
             </table>
-            <br/><br/>
-            <b>Estudios previos:</b>
             <br/>
-            <textarea rows="2" cols="50"></textarea>
+            <p><label for="estudios"><b>Estudios previos:</b></label></p>
+            <textarea rows="2" cols="50" nanme="estudios" id="estudios" placeholder="insertar texto..."></textarea>
             <br/><br/>
             <button type="button">Enviar</button>
             <input type="reset" name="Reset"></input>
-        </form>        
-        <p><b>Pulsa el botón de "enviar" para formalizar la matrícula o el boton de "restablecer" para limpiar el formulario.</b></p>
-    </body>   
+            </fieldset>
+        </form>  
+        <fieldset>
+            <legend>
+                Info!
+            </legend>
+            <p><b>Pulsa el botón de "enviar" para formalizar la matrícula o el boton de "restablecer" para limpiar el formulario.</b></p>
+        </fieldset>      
+        </body>   
 </html>
