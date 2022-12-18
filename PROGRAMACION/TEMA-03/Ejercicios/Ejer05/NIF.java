@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicioa0404;
+package ejercicioa0405;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class NIF {
 	private int num;
 	private char letra;
 
-	// Contructores
+	// Constructores
 	public NIF() {
 	}
 
@@ -23,6 +23,7 @@ public class NIF {
 	}
 
 	// Métodos
+
 	private char calcularLetra(int n) {
 		switch (n % 23) {
 		case 0:
@@ -86,8 +87,7 @@ public class NIF {
 
 	@Override
 	public String toString() {
-		//String numero = Integer.toString(num);
-		String numero = num + ""; //convierto a String
+		String numero = num + "";
 		while (numero.length() < 8) {
 			numero = "0" + numero;
 		}

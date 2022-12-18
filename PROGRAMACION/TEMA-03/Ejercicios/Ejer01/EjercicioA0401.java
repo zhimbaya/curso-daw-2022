@@ -18,10 +18,10 @@ public class EjercicioA0401 {
         System.out.println("Escribe el valor del radio");
         double radio = sc.nextDouble();
         Circulo c1 = new Circulo(radio);
-        Circulo c2 = new Circulo();
         
         System.out.println("Escribe el valor del radio para el segundo círculo");
         radio = sc.nextDouble();
+        Circulo c2 = new Circulo();
         c2.setRadio(radio);
         
         System.out.println("El radio del primer círculo es "+c1.getRadio());

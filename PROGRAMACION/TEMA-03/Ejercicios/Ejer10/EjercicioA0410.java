@@ -5,15 +5,9 @@
  */
 package ejercicioa0410;
 import java.util.Scanner;
-/**
- *
- * @author Anuska
- */
+ 
 public class EjercicioA0410 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
@@ -21,6 +15,7 @@ public class EjercicioA0410 {
         int dec = sc.nextInt();
         Binario bin = new Binario(dec);
         System.out.println(dec+" en binario es "+bin.getValor());
+        
         long nBin;
         do
         {
@@ -29,7 +24,8 @@ public class EjercicioA0410 {
             
         }while (!Binario.esValido(nBin));
         Binario bin2 = new Binario(nBin);
-        System.out.println(nBin +" en decimal es "+bin2.toDecimal());        
+        System.out.println(nBin +" en decimal es "+bin2.toDecimal());
+               
     }
     
 }
