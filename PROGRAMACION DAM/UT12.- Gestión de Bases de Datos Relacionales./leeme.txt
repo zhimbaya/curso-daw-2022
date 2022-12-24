@@ -1,0 +1,22 @@
+Leeme para JSP
+1.-Instalar el JavaEE de eclipse (https://www.eclipse.org/downloads/packages/)
+
+y  añadir en las properties del proyecto Targeted Runtime el Tomcat.
+
+2.- Crear un Dynamic Web Project.
+
+3.-Crear un JSP File
+
+4.- Modificar la cabecera del web.xml con lo siguiente:
+
+ 
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app id="WebApp_ID" version="2.5"
+
+xmlns="http://java.sun.com/xml/ns/javaee" 
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">

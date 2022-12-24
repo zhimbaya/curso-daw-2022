@@ -1,0 +1,24 @@
+Actividades UT12
+Diseñar una aplicación que muestre un informe de los alumnos, según sus notas: todos los alumnos cuya nota es Bien(nota entre 6 y 7) y todos los alumnos cuya nota es Notable(entre 7 y 9). Cada informe debe ordenarse por la nota de forma ascendente.(Base de datos Instituto  PresentaciónTeoría)
+
+Para realizar esta actividad usaremos una consulta con parámetros y la reutilizaremos.
+
+
+
+
+Modificar AlumnoDAO de PresentaciónTeoría, añadiendo un nuevo método llamado readAll(), para que pueda leer todos los alumnos devolviendo una lista con todos ellos. También, implementar la opción de modificar, obteniendo y mostrando el alumno a modificar y después solicitando todos los datos para modificar el alumno con los nuevos datos.
+
+
+Crear una aplicación que lea de un fichero las operaciones a realizar en una base de datos y actualice la base de datos Instituto2 con el patrón de diseño DAO.
+
+El fichero será de texto y contendrá la siguiente información separada por el carácter "|":
+
+Un carácter que indicará el tipo de operación a realizar:
+A: para insertar un alumno
+M: para modificar un alumno
+D: para borrar un alumno
+Un número: que indicará la identificación del alumno
+Nombre y apellido del alumno
+Fecha de nacimiento (AAAA-MM-DD)
+Nota media (Ejemplo 9.24)
+Curso que contendrá dos carácteres en mayúsculas (ejemplo: DM, DW)

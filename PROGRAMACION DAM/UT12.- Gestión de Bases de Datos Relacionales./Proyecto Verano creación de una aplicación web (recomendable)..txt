@@ -1,0 +1,15 @@
+Hola a todos:
+
+después de haber aprendido JSP y acceso a base de datos con JSP, será el momento de aplicar todo lo aprendido durante el curso realizando un proyecto web (en solitario o en grupo).
+
+Requisitos:
+
+Lo primero tener la idea de lo que se quiere hacer
+Front-end_ más de una página web.
+Back-end: los datos se almacenan en una base de datos MySQL. Realizar el diseño de base de datos, creando el modelo E/R , pasarlo a tablas con las reglas de transformación (verificar que no hay redundancia en los datos) y realizar el script de creación de base de datos.
+Servidor de aplicaciones Tomcat.
+Entorno de desarrollo eclipse JAVASEE.
+Despliegue...Serías capaz de exportar tu proyecto a un fichero .war y desplegarlo en otro tomcat (directorio webapps) y acceder a tu proyecto desde el móvil?
+Satisfecho con tu trabajo?
+Ánimo y suerte!!
+

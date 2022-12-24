@@ -1,0 +1,77 @@
+Solución Pasar a tablar el diagrama E/R
+CURSOS (código,nivel_educativo,n_curso)
+
+PK->código
+
+FK->ninguna
+
+GRUPOS(código,letra,cod_aula)
+
+PK->código,letra
+
+FK->código relacionada con código de CURSOS
+
+FK->cod_aula relacionada con código de la tabla AULAS
+
+AULAS(código, n_plazas,n_ordenadores)
+
+PK->código
+
+FK->ninguna
+
+BECAS(ident,cuantía,fecha,cod_alumno)
+
+PK->ident
+
+FK->cod_alumno ref ALUMNOS(n_expediente)
+
+ALUMNOS(n_expediente,nombre,telefono,fecha_nac,delegado,código_curso,letra)
+
+PK->n_expediente
+
+FK->delegado relacionado con n_expediente de ALUMNOS
+
+FK->código_curso,n_grupo relacionada con código,letra de GRUPOS
+
+
+
+CURSAN (n_expediente, código_módulo,nota)
+
+PK->n_expediente,código_módulo
+
+FK->n_expediente relacionado con ALUMNOS
+
+FK->código_módulo con MÓDULOS
+
+MÓDULOS (código,nombre,id_profesor)
+
+PK->código
+
+FK->id_profesor con id de PROFESORES
+
+TEMAS (código,título, id_módulo)
+
+PK->código
+
+FK->id_módulo relacionado con código de MÓDULOS
+
+PROFESORES (dni,nombre,dirección)
+
+PK->dni
+
+FK->no tiene
+
+EMPRESAS (código,nombre)
+
+PK->código
+
+FK->ninguna
+
+TRABAJAN(DNI_profesor,código_empresa)
+
+PK->DNI_profesor
+
+FK->DNI_profesor relacionado con PROFESORES(DNI)
+
+FK->código_empresa relacionado con EMPRESAS(código)
+

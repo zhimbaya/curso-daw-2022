@@ -1,0 +1,15 @@
+Descarga de Base de datos de jardinería.
+Descárgate la bases de datos “jardinería.sql” desde Internet en la dirección
+
+https://mega.co.nz/#%21ZEQVFCDL%21vrOUxgDZ30vX6g94b_qcXVTzUXBQv
+63MmKpljytfw5k
+Antes de descargar la BBDD comprueba que tienes instalado correctamente
+MySQL en tu ordenador. Una vez efectuada las descargas, inicia MySQL en tu consola y teclea lo
+siguiente: (antes cambia CHARACTER SET utf8mb4; en la primera línea
+
+source /ruta del archivo/jardineria.sql;
+Una vez terminado este paso teclea “show databases;” y comprueba que te
+aparece la base de datos “jardinería”. Si es así, para empezar trabajar
+con ella deberás teclear “use jardineria;”
+También puedes probarlo desde phpMyAdmin.
+Identifica todas las entidades de la base de datos,los atributos por cada una de ellas con el tipo de datos,  claves primarias, índices...

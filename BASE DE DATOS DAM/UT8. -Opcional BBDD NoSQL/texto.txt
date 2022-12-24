@@ -1,0 +1,158 @@
+item 1={
+descripcion: "Mando xBox negro",
+fecha: new Date ("2015, 3 , 21"),
+precio: 10,
+tags: ["consolas", "xbox", "entretenimiento"],
+vendedor: {email: "pperez@gmail.com", psw: "pperez"},
+localizacion: { longitude: 37.743671, latitude: -2.552276},
+estado: "disponible",
+contraofertas: [
+{email: "llopez@gmail.com", psw: "llopez", oferta: 8, fecha: new Date("2015, 4, 2")},
+{email: "ggomez@gmail.com", psw: "ggomez", oferta: 7, fecha: new Date("2015, 4 , 13")}
+]
+}
+
+db.items.insert(item1)
+
+db.items.insert({
+descripcion: "Mando Wii Mario",
+fecha: new Date ("2013, 10, 2"),
+precio: 8,
+tags: ["consolas", "wii", "entretenimiento"],
+vendedor: {email: "ffernandez@gmail.com", psw: "ffernandez"},
+localizacion: {longitude: 38.743671, latitude: -10.552276},
+estado: "vendido",
+comprador: {email: "llopez@gmail.com", psw: "llopez"},
+contraofertas: [
+{email: "llopez@gmail.com", psw: "llopez", oferta: 7, fecha: new Date("2013, 10, 20")},
+{email: "aalonso@gmail.com", psw: "ggomez", oferta: 5, fecha: new Date("2013, 10, 19")}
+]
+})
+
+
+
+db.items.insert({
+descripcion: "Thermomix",
+fecha: new Date ("201 5, 5, 2"),
+precio: 80,
+tags: ["robot cocina", "menaje"],
+vendedor: {email : "ffernandez@gmail.com", psw: "ffernandez"},
+localizacion: {longitude: 38.743671, latitude: -10.552276},
+estado: "disponible"
+})
+
+
+usr1={ nombre :"Luis L�pez", email: "llopez@gmail.com", psw:"llopez", direccion: {via:"C/Pez", num:3, ciudad:"Madrid", cp: "28031"}},
+usr2={ nombre :"Francisco Fern�ndez", email: "ffernandez@gmail.com", psw:"ffernandez", direccion: {via:"C/Luna Nueva", num:145, ciudad: "Barcelona", cp: "08009 "}},
+usr3={ nombre :"Gema Gomez", email: "ggomez@gmail.com", psw:"ggomez", direccion: {via:"C/Sansa", num:28, ciudad:"Valencia", cp: "46015"}},
+usr4={ nombre :"Pepe Perez", email: "pperez@gmail.com", psw:"pperez", direccion: {via:"C/Sansa", num:79, ciudad:" Valencia", cp: "46015"}} ,
+usr5={ nombre :"Ana Alonso", email: "aalonso@gmail.com", psw:"aalonso", direccion: {via:"C/Luna Llena", num:32, ciudad:"Barcelona", cp: "08009"}}
+
+db.usuarios.insert([usr1,usr2,usr3,usr4,usr5])
+
+items.find()
+
+db.items.find({ descripcion : "Thermomix"},{ _id:0, precio:1 })
+
+db.items.find(
+{tags: "consolas"},
+{_id:0, descripcion:1})
+
+db.items.find(
+{tags: "consolas" , tags: "wii"},
+{_id:0, descripcion:1 , precio:1 })
+
+db.items.find(
+{tags: {$in:[ "consolas" , "wii "]} },
+{_id:0, descripcion:1 , precio:1})
+
+var start = new Date(2014, 1, 1)
+db.items.find(
+{tags: "consolas",
+"contraofertas.fecha": {$gte: start}},
+{descripcion:1})
+
+db.items.find().sort( { "contraofertas.fecha": -1 } )
+
+db.usuarios.find().sort( { "direccion.ciudad": 1 } )
+
+items.distinct("vendedor.email")
+
+db.usuarios.count({"direccion.ciudad": "Valencia"})
+(equivalente a ) ({"direccion.ciudad": "Valencia"}) .count()
+
+db.items.aggregate([
+{$group:{_id:"$ vendedor.email",
+articulos : {$push: "$descripcion"}}}] )
+
+
+db.items.ensureIndex({ "descripcion" :1})
+
+db.items.ensureIndex({"vendedor.email":1})
+
+db.items.ensureIndex({"vendedor":1})
+
+db.items.ensureIndex ({"descripcion":1,"estado":1})
+
+db.items.ensureIndex({"localizacion":"2dsphere"})
+
+db.items.find(
+{"localizacion":
+{$near:
+{$geometry:
+{
+type:"Point",
+coordinates :[ 37.743670, -2.552276 ]
+},
+$maxDistance:1000
+}
+}
+}
+)
+
+db.items.update(
+{descripcion : "Mando xBox negro "},
+{$set:{
+estado: "vendido",
+comprador: {email: "llopez@gmail.com", psw: llopez"}}
+})
+
+
+db.usuarios.update(
+{email: "ffernandez@gmail.com", psw:"ffernandez2"},
+{$set: {email: "ffernandez@gmail.com", psw:"ffernandez2", direccion: {via:"C/Escalona", num:8, ciudad: "Barcelona"} }},
+{upsert:true}
+)
+
+db.usuarios.update(
+{"direccion.via":"C/ Escalona "},
+{$set: {"direccion.via":"C/Ancha"}},
+{multi:true}
+)
+
+
+db.items.update(
+{descripci on:"Thermomix "},
+{$addToSet: {
+contraoferta : {email: "ggomez@gmail.com", psw: "ggomez", oferta: 7 3, fecha: new Date("2015, 5 , 9")} }
+})
+
+
+db.items.update(
+{descripcion: "Thermomix"},
+{$inc : {precio: -7},
+$set: {estado: "vendido", comprador: {email: "ggomez@gmail.com", psw: "ggomez"}}
+}
+)
+
+db. items .update(
+{tags : " entretenimiento " },
+{$pull: { tags : " entretenimiento "}},
+{multi: true}
+)
+
+db.items.remove({})
+
+db.items.drop()
+
+db.dropDatabase()

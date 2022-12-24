@@ -1,0 +1,31 @@
+Crear Librería de Funciones de Arrays
+A continuación se solicita crear las siguientes funciones con Arrays:
+
+CrearArrayInt: creará un array con números aleatorios enteros, pasándole como parámetro la longitud del array.
+CrearArrayString: creará un array con String que contendrá "Dato"+un número aleatorio, pasándole como parámetro la longitud del array.
+MostrarArrayInt: mostrará el contenido de un array pasado como parámetro.
+MostrarArrayString: mostrará el contenido de un array pasado como parámetro.
+BuscarArrayInt: buscará un  entero dentro de un array, devolverá true si lo encuentra y false si no. El array y el entero serán pasados como parámetros.
+BuscarArrayString: buscará un String dentro de un array de String y devolverá true si o encuentra y false en caso contrario. Tanto el array como el String serán lpasados por parámetros.
+LocalizaPosInt: localizará la primera posición del entero en el array y la devolverá; en caso contrario, devolverá -1. Tanto el array como el valor serán pasados por parámetros.
+LocalizaPosString: localizará la primera posición del String en el array. Si no se encuentra, devolverá -1. Tanto el array como el valor serán pasados por parámetros.
+VecesIntArray: devolverá el número de veces que aparece el entero en el array. Tanto el array como el entero se pasarán como parámetros.
+VecesStringArray: devolverá el número de veces que aparece el String en el array. Tanto el array como el String serán pasados por parámetros.
+UnirArraysInt: devolverá un array con la unión de dos arrays pasado como parámetros...
+SustituirIntArray: cambiará los enteros encontrados en el array por el segundo entero y devolverá el número de veces que se ha cambiado. Si no se ha cambiado ninguna vez, devolverá  -1. Parámetros a pasar: el array de enteros, el número buscado, el número a sustituir.
+SustituirStringArray: cambiará los String encontrados en el array por el segundo String pasado como parámetro. Devolverá el número de veces que se ha cambiado dicho string; en caso contrario, devolverá -1. Parámetros a pasar: array de String, String buscado, String a sustituiir.
+Ordenación de array de enteros (Método de la burbuja). Realizar una función que ordene un array por el método de la burbuja (mirar documento de algoritmos de búsquedas y ordenación)
+Ordenación de array de String (Métod de la burbuja). Realizar una función que ordene un array por el método de la burbuja (mirar documento de algoritmos de búsquedas y ordenación)
+Realizar la búsqueda dicotómica de un entero en un array ordenado. (mirar documento de algoritmos de ordenación) 
+Realizar la búsqueda dicotómica de un String en un array ordenado. (mirar documento de algoritmos de ordenación) 
+Consultar la clase Arrays en la API de Java y concretamente el método sort(). Crear un array de tipo entero y otro de tipo String y ordenarlo con este método. ¿Has visto qué tipo de algoritmo de ordenación usa?
+CrearArrayPersona: creará un array que contendrá valores el tipo de dato Persona que será una clase con las siguientes características:
+Dos atributos: nombre de tipo String y edad de tipo entero.
+Tendrá sus getters y setters por cada atributo.
+   Al crear el array, el nombre de cada Persona será generado con una letra mayúscula generada aleatoriamente (mirar tabla ASCII) seguido de un número del 1 al 200 generados también aleatoriamente. La edad también se generará aleatoriamente del 1 al 120.
+MostrarArrayPersona: mostrará los valores de los atributos de las Personas de un Array.(sobreescribir método toString() de un objeto)
+OrdenarArrayPersona: ordenará el array de Personas según su edad (utilizad el método sort() de la clase  Arrays. Para poder comparar objetos, la clase Persona deberá implementar el interfaz Comparable y sobreescribir el método compareTo.
+CrearMatrizInt: creará una matriz de enteros aleatorios de n filas y m columnas que serán pasados por parámetros. Los números aleatorios generados serán entre 20 y 120.
+CrearMatrizString: creará una matriz de String de n filas y m columnas pasadas como parámetros. El valor de cada String será formado por una letra mayúsculas generada aleatoriamente seguido de un número entre 1 y 101 generados también aleatoriamente.
+MosttrarMatrizInt: mostrará una matriz de enteros pasada como parámetro.
+MostrarMatrizString: mostrará una matriz de String pasada como parámetro.

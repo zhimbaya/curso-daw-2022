@@ -1,0 +1,22 @@
+Lista de algoritmos para resolver con diagrama de flujos.
+La lista sería:
+
+1.- Realizar  la suma de dos números solicitados por teclado.
+
+2.- De dos números introducidos por teclado  se realizará la resta si el número primero es mayor que el segundo. En caso contrario se realizará la suma.
+
+3.-Dado un número, escribir todos los números desde el 0. Por ejemplo: Para 3, la salida sería:
+
+               0
+
+               1
+
+               2 
+
+               3
+
+4.- Solicitando un número, mostrar la tabla de multiplicar.
+
+5.- Dado un número, mostrar los números pares que hay desde el 1 hasta ese número incluido.
+
+6,7,8, 9 y 10 cualquier ejercicio de la actividad de algoritmos..

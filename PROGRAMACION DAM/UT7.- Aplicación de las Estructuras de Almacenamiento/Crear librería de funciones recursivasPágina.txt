@@ -1,0 +1,7 @@
+Crear librería de funciones recursivas
+Crear una clase Frecursivas que tendrá las siguientes funciones recursivas:
+
+factorial: función recursiva que devolverá el factorial de un número pasado como parámetro.
+fibonacci: función recursiva que devolverá el número fibonacci de una posición pasada como parámetro.
+potencia: función recursiva que devolverá la potencia de un número, pasándole como parámetros la base y el exponente.
+sumardig: función recursiva que devolverá la suma de los dígitos de un número, pasándole como parámetro el número.
