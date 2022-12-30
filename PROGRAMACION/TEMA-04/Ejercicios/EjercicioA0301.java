@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicioa0301;
+package Tema04;
 
 import java.util.Scanner;
 
