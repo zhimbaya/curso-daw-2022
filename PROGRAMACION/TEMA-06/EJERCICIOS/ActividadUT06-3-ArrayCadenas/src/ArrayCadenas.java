@@ -32,7 +32,6 @@ public class ArrayCadenas
  		System.out.println();
  	}
  	
- 	////////////////////////////////////////////////////////////////////////////
  	
  	public static void escribirArray(String array[])
 	{
@@ -40,7 +39,6 @@ public class ArrayCadenas
 			System.out.println("Array[" + i + "] = " + array[i]);
 	}
  	
- 	////////////////////////////////////////////////////////////////////////////
  	
  	public static void ordenaBurbuja(String array[])
  	{
@@ -66,7 +64,6 @@ public class ArrayCadenas
  		}while( intercambio );
  	}
  	
- 	////////////////////////////////////////////////////////////////////////////
  	
  	public static String[] fusion(String arrayCadenas1[],String arrayCadenas2[])
  	{

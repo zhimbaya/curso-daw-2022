@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class ContarVocales {
+		/*
+		Crear un clase que tenga un método principal que incorpore el 
+		conteo del número de vocales de una cadena de texto introducida 
+		por teclado. Tener en cuenta que debe considerar tanto mayúsculas 
+		como minúsculas, así como sus variantes con tilde.
+		*/
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
