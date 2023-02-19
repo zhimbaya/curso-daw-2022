@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Tema05;
+package Tema5;
 
 /**
  *
@@ -33,7 +33,7 @@ public class DNI {
         char letraNIF;      // Letra del número de NIF calculado
 
         // Cálculo de la letra del NIF       
-        letraNIF = calcularLetraNIF(numDNI);
+        letraNIF = DNI.calcularLetraNIF(numDNI);
 
         // Construcción de la cadena del DNI: número + letra
         cadenaNIF = Integer.toString(numDNI) + String.valueOf(letraNIF);
