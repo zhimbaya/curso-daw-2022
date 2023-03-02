@@ -1,4 +1,4 @@
-package Tema6;
+package Tema06;
 
 import java.util.Scanner;
 
@@ -14,11 +14,10 @@ public class ConteoAbecedario {
     Nota: Haremos el ejercicio de forma que no distinga letras minúsculas de 
     mayúsculas (no case sensitive).
      */
-
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
 
         int arrayCont[];
+        //ascii 122 - 97
         int tamAbc = 'z' - 'a' + 1;
         //System.out.println(tamAbc);
         arrayCont = new int[tamAbc];
@@ -29,7 +28,7 @@ public class ConteoAbecedario {
 
     public static void inicializarArray(int arrayCont[]) {
         /* no hace falta inicializar el contador a 0 porque al crear el array
-		 inicializa todas las posiciones  a 0, pero se haria: */
+        inicializa todas las posiciones  a 0, pero se haria: */
 
         int i;
         for (i = 0; i < arrayCont.length; i++) {
@@ -39,9 +38,9 @@ public class ConteoAbecedario {
 
     public static void contadorLetras(int arrayCont[]) {
         Scanner sc = new Scanner(System.in);
-        int numVocales = 0;
         System.out.println("Introduzca cadena:");
         String cad = sc.nextLine(); //leemos la cadena a analizar
+        //int numVocales = 0;
 
         char car;
 
@@ -50,17 +49,21 @@ public class ConteoAbecedario {
             car = cad.charAt(i);
             car = Character.toLowerCase(car); //Uniformizamos ya que el enunciado nos dice que no debe ser case sensitive
             if (car >= 'a' && car <= 'z') {
-                arrayCont[car - 'a']++;
+                //arrayCont[car - 'a']++; //es lo mismo
+                //arrayCont[car - 'a'] += 1;
+                arrayCont[car - 'a'] = arrayCont[car - 'a'] + 1;
+                
+                //System.out.print(arrayCont['h' - 'a']);
             }
-
         }
-
+        //imprime el abcdario
         for (char letra = 'a'; letra <= 'z'; letra++) {
             System.out.print(letra + " ");
         }
 
         System.out.println("\n\n");
-
+        
+        //imprime el número de veces.
         for (int i = 0; i < arrayCont.length; i++) {
             System.out.print(arrayCont[i] + " ");
         }
