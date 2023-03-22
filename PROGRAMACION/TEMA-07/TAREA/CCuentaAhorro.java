@@ -39,7 +39,7 @@ public class CCuentaAhorro extends CCuenta {
         int diaDelMes = calendario.get(Calendar.DAY_OF_MONTH);
         if (diaDelMes == 1) {
             double cuota = getCuotaMante();
-            ingreso(cuota);
+            reintegro(cuota);
         }
     }
 

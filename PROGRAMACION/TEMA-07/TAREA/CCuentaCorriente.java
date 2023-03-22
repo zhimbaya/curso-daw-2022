@@ -14,7 +14,7 @@ import java.util.GregorianCalendar;
 public class CCuentaCorriente extends CCuenta {
 
     // Atributo
-    protected int transacciones = 0;
+    protected int transacciones;
     protected double importePorTrans;
     protected int transExentas;
 
@@ -22,14 +22,23 @@ public class CCuentaCorriente extends CCuenta {
     public CCuentaCorriente() {
     }
 
-    public CCuentaCorriente(String nombreTitular, String numCuenta, double saldo, double tipoDeInteres, double importePorTrans, int transExentas) {
+    public CCuentaCorriente(String nombreTitular, String numCuenta, double saldo, double tipoDeInteres, int transacciones, double importePorTrans, int transExentas) {
         super(nombreTitular, numCuenta, saldo, tipoDeInteres);
+        transacciones = 0;
         this.importePorTrans = importePorTrans;
         this.transExentas = transExentas;
     }
 
     public void decrementarTransacciones() {
         transacciones -= 1;
+    }
+
+    public void setTransacciones(int transacciones) {
+        this.transacciones = transacciones;
+    }
+
+    public int getTransacciones() {
+        return transacciones;
     }
 
     public void setImportePorTrans(double importePorTrans) {
@@ -65,7 +74,7 @@ public class CCuentaCorriente extends CCuenta {
         if (diaDelMes == 1) {
             double comisiones = (transacciones - getTransExentas()) * getImportePorTrans();
             if (comisiones > 0) {
-                ingreso(getSaldo() - comisiones);
+                reintegro(getSaldo() - comisiones);
                 System.out.println("Se han cobrado " + comisiones + " euros en comisiones.");
             }
             transacciones = 0;

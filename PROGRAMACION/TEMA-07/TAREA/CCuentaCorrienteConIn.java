@@ -16,8 +16,8 @@ public class CCuentaCorrienteConIn extends CCuentaCorriente {
     public CCuentaCorrienteConIn() {
     }
 
-    public CCuentaCorrienteConIn(String nombreTitular, String numCuenta, double saldo, double tipoDeInteres, double importePorTrans, int transExentas) {
-        super(nombreTitular, numCuenta, saldo, tipoDeInteres, importePorTrans, transExentas);
+    public CCuentaCorrienteConIn(String nombreTitular, String numCuenta, double saldo, double tipoDeInteres, int transacciones, double importePorTrans, int transExentas) {
+        super(nombreTitular, numCuenta, saldo, tipoDeInteres,transacciones, importePorTrans, transExentas);
     }
 
     @Override
