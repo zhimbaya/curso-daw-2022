@@ -1,0 +1,202 @@
+
+import java.io.*;
+import java.util.Scanner;
+
+
+public class Tarea10 {
+
+    private static String forigen="";
+    private static String fdestino="";
+    private static final int MIN = 100;
+    private static final int MAX = 200;
+    private static String nFichero = "config.bin";
+    
+    public static int contarPalabrasEnLinea(String l)
+    {
+        l.strip();
+        if (l.length()==0)
+            return 0;
+        else
+        {
+            int posEspacio = l.indexOf(" ");
+            if (posEspacio==-1)
+                return 1;
+            else
+                return 1+contarPalabrasEnLinea(l.substring(posEspacio+1));
+        }
+    }
+    
+    public static int contarPalabras(String f)
+    {
+        int cont = 0;
+        BufferedReader br = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(f));
+            String linea = br.readLine();
+            while (linea!=null)
+            {
+                cont+=contarPalabrasEnLinea(linea);
+                linea = br.readLine();
+            }
+        }
+        catch (FileNotFoundException e )
+        {
+            System.out.println("Error abriendo el fichero "+f);
+        }
+        catch (IOException e)
+        {
+            System.out.println("Error leyendo el fichero "+f);
+        }
+        finally
+        {
+            try
+            {
+                if (br!=null)
+                    br.close();
+            }
+            catch (IOException e)
+            {
+                System.out.println("Error cerrando el fichero "+f);
+            }
+        }
+        return cont;
+    }
+    
+    
+    public static void leerRedacciones()
+    {
+        BufferedReader br = null;
+        BufferedWriter bw = null;
+        try
+        {
+            br = new BufferedReader(new FileReader(forigen));
+            bw = new BufferedWriter(new FileWriter(fdestino));
+            bw.write("NOMBRE\tPALABRAS\tCORRECTO\n\n");
+            String nombre = br.readLine();
+            while (nombre!=null)
+            {
+                String redaccion = br.readLine();
+                int palabras = contarPalabras(redaccion);
+                bw.write(nombre+"\t"+palabras+"\t"+((palabras>=MIN &&palabras<=MAX)?"SI\n":"NO\n"));                
+                nombre = br.readLine();
+            }
+                    
+        }
+        catch (FileNotFoundException e)
+        {
+            System.err.println("No se puede abrir el fichero de alumnos");
+        }
+        catch (IOException e)
+        {
+            System.err.println("Error leyendo el fichero de alumnos");
+        }
+        finally
+        {
+            try
+            {
+                if (br!=null)
+                    br.close();
+                if (bw!=null)
+                    bw.close();
+            }
+            catch (IOException e)
+            {
+                System.out.println("Error cerrando los ficheros");
+            }
+        }
+    }
+    
+    
+    public static void escribirConfig(String ent, String sal)
+    {
+        DataOutputStream dos = null;
+        try
+        {
+            dos = new DataOutputStream(new FileOutputStream(nFichero));
+            dos.writeUTF(ent);
+            dos.writeUTF(sal);
+        }
+        catch (IOException e)
+        {
+            System.out.println("Error creando el fichero de configuración");
+        }
+        finally
+        {
+            try
+            {
+                if (dos!=null)
+                    dos.close();
+            }
+            catch (IOException e)
+            {
+                System.out.println("Error cerrando el fichero de configuración");
+            }
+        }
+    }
+    
+    public static void leerConfig() throws FileNotFoundException, IOException
+    {
+        DataInputStream dis = null;
+        try
+        {
+            dis = new DataInputStream(new FileInputStream(nFichero));
+            forigen = dis.readUTF();
+            fdestino = dis.readUTF();
+
+        }
+        catch (FileNotFoundException e)
+        {
+            throw new FileNotFoundException();
+        }
+        catch (IOException e)
+        {
+            throw new IOException();
+        }
+        finally
+        {
+            try
+            {
+                if (dis!=null)
+                    dis.close();
+            }
+            catch (IOException e)
+            {
+                throw new IOException();
+            }
+        }
+    }
+    
+    public static void abrirConfig() throws FileNotFoundException,IOException
+    {
+        Scanner sc = new Scanner(System.in);
+        File f = new File(nFichero);
+        if (!f.exists())
+        {
+            System.out.println("Indica el fichero de entrada");
+            forigen = sc.nextLine();
+            System.out.println("Indica la ruta de salida");
+            fdestino = sc.nextLine();
+            escribirConfig(forigen, fdestino);
+        }
+        else
+            leerConfig();
+        
+    }
+        
+
+    
+    public static void main(String[] args) {
+
+        try
+        {
+            abrirConfig();
+            leerRedacciones();
+        }
+        catch (IOException e)
+        {
+            System.out.println("Error intentado abrir o crear el fichero de configuración");
+        }
+   }
+        
+}

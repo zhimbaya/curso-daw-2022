@@ -16,8 +16,19 @@
                 "file": "ENTORNOS/UT04. Optimización y documentación./4.D.03 Documentación.pdf"
               }
             }
+          },
+          {
+            "id": "45946945f0ed4886",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.4"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -144,7 +155,7 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "31195a4266ebecd7",
+  "active": "45946945f0ed4886",
   "lastOpenFiles": [
     "PROGRAMACION/TEMA-01/PREGUNTAS/PREGUNTAS WEB TEMA 1.docx",
     "PROGRAMACION/TEMA-01/PREGUNTAS/PREGUNTAS WEB.docx",
