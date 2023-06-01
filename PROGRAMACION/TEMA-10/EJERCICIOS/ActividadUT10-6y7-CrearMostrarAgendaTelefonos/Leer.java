@@ -7,10 +7,11 @@ public class Leer {
 
     public static String dato() {
         String sdato = "";
+        BufferedReader flujoE;
         try {
             // Definir un flujo de caracteres de entrada: flujoE
             InputStreamReader isr = new InputStreamReader(System.in);
-            BufferedReader flujoE = new BufferedReader(isr);
+            flujoE = new BufferedReader(isr);
             // Leer. La entrada finaliza al pulsar la tecla Entrar
             sdato = flujoE.readLine();
         } catch (IOException e) {
@@ -23,7 +24,7 @@ public class Leer {
         try {
             return Short.parseShort(dato());
         } catch (NumberFormatException e) {
-            return Short.MIN_VALUE; // valor m�s peque�o
+            return Short.MIN_VALUE; // valor más pequeño
         }
     }
 

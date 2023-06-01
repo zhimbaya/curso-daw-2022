@@ -5,30 +5,28 @@ import java.lang.*;
 
 public class LeerFicheroTextoLinea {
 
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[]) {
         try {
             if (args.length != 1) {
-                throw new ArgumentosIncorrectos();
+                throw new ArgumentosIncorrectox();
             } else {
                 File fichero = new File(args[0]);
 
                 if (fichero.exists()) {
                     mostrarFichero(fichero);
                 } else {
-                    throw new FicheroInexistente();
+                    throw new FicheroInexistentex();
                 }
             }
-        } ////////////////////////////////////////////////////////////////////////
-        catch (ArgumentosIncorrectos error) {
+        } catch (ArgumentosIncorrectox error) {
             System.out.println("El Numero de Argumentos es Incorrecto");
             System.out.println("Sintaxis: java CrearFicheroTexto nomFichero");
-        } catch (FicheroInexistente error) {
+        } catch (FicheroInexistentex error) {
             System.out.println("El Fichero No Existe");
         }
 
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public static void mostrarFichero(File fichero) {
         BufferedReader flujoEntrada = null;
 
@@ -53,17 +51,16 @@ public class LeerFicheroTextoLinea {
     }
 }
 
-////////////////////////////////////////////////////////////////////////////////
-class ArgumentosIncorrectos extends Exception {
+class ArgumentosIncorrectox extends IOException {
 
-    public ArgumentosIncorrectos() {
+    public ArgumentosIncorrectox() {
         super();
     }
 }
 
-class FicheroInexistente extends Exception {
+class FicheroInexistentex extends FileNotFoundException {
 
-    public FicheroInexistente() {
+    public FicheroInexistentex() {
         super();
     }
 }

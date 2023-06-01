@@ -25,13 +25,11 @@ public class PropiedadesFicheros {
             } else {
                 for (int i = 0; i < args.length; i++) {
                     File fichero = new File(args[i]);
-
                     if (!fichero.exists()) {
                         throw new FicheroInexistente();
                     } else {
-                        propiedades(fichero);
+                        nomFichero(fichero);
                     }
-
                 }
             }
         } catch (ArgumentosIncorrectos error) {
@@ -41,27 +39,27 @@ public class PropiedadesFicheros {
         }
     }
 
-    public static void propiedades(File fichero) {
+    public static void nomFichero(File nomFichero) {
 
-        if (fichero.isFile()) {
-            System.out.println("El Nombre del Fichero es: " + fichero.getName());
-            System.out.println("La Ruta Absoluta del Fichero es: " + fichero.getAbsolutePath());
-            System.out.println("La Ruta Relativa del Fichero es: " + fichero.getPath());
+        if (nomFichero.isFile()) {
+            System.out.println("El Nombre del Fichero es: " + nomFichero.getName());
+            System.out.println("La Ruta Absoluta del Fichero es: " + nomFichero.getAbsolutePath());
+            System.out.println("La Ruta Relativa del Fichero es: " + nomFichero.getPath());
 
-            if (fichero.canRead()) {
+            if (nomFichero.canRead()) {
                 System.out.println("El Fichero se Puede Leer");
             } else {
                 System.out.println("El Fichero No se Puede Leer");
             }
 
-            if (fichero.canWrite()) {
+            if (nomFichero.canWrite()) {
                 System.out.println("El Fichero se Puede Escribir");
             } else {
                 System.out.println("El Fichero No se Puede Escribir");
             }
         } else {
-            if (fichero.isDirectory()) {
-                String nomFicheros[] = fichero.list();
+            if (nomFichero.isDirectory()) {
+                String nomFicheros[] = nomFichero.list();
                 for (int i = 0; i < nomFicheros.length; i++) {
                     System.out.println(nomFicheros[i]);
                 }
@@ -70,14 +68,14 @@ public class PropiedadesFicheros {
     }
 }
 
-class ArgumentosIncorrectos extends Exception {
+class ArgumentosIncorrectos extends IOException {
 
     public ArgumentosIncorrectos() {
         super();
     }
 }
 
-class FicheroInexistente extends Exception {
+class FicheroInexistente extends FileNotFoundException {
 
     public FicheroInexistente() {
         super();
