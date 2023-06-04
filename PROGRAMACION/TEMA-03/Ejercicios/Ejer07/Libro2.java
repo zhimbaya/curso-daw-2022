@@ -1,22 +1,26 @@
 package Tema03;
 
-public class Libro {
-
+public class Libro2 {
     // Atributos
+
     private String titulo;
     private String autor;
     private int ejemplares;
     private int prestados;
 
+    private static int totalLibros = 0;
+    private static int totalPrestados = 0;
+
     // Constructores
-    public Libro() {
+    public Libro2() {
     }
 
-    public Libro(String titulo, String autor, int ejemplares, int prestados) {
+    public Libro2(String titulo, String autor, int ejemplares, int prestados) {
         this.titulo = titulo;
         this.autor = autor;
         this.ejemplares = ejemplares;
         this.prestados = prestados;
+        totalLibros += ejemplares;
     }
 
     public String getTitulo() {
@@ -35,6 +39,14 @@ public class Libro {
         return this.prestados;
     }
 
+    public static int getTotalLibros() {
+        return totalLibros;
+    }
+
+    public static int getTotalPrestados() {
+        return totalPrestados;
+    }
+
     public void setTitulo(String t) {
         this.titulo = t;
     }
@@ -44,7 +56,10 @@ public class Libro {
     }
 
     public void setEjemplares(int e) {
+        int diferencia = e - this.ejemplares;
+        totalLibros = totalLibros + diferencia;
         this.ejemplares = e;
+
     }
 
     public void setPrestados(int p) {
@@ -54,6 +69,7 @@ public class Libro {
     public boolean prestamo() {
         if (this.prestados < this.ejemplares) {
             this.prestados++;
+            totalPrestados++;
             return true;
         } else {
             return false;
@@ -63,6 +79,7 @@ public class Libro {
     public boolean devolucion() {
         if (prestados > 0) {
             prestados--;
+            totalPrestados--;
             return true;
         } else {
             return false;
@@ -74,6 +91,8 @@ public class Libro {
         System.out.println("Autor: " + autor);
         System.out.println("Ejemplares: " + ejemplares);
         System.out.println("Prestados: " + prestados);
+        System.out.println("Porcentaje ejemplares: " + (double) ejemplares / totalLibros * 100 + "%");
+        System.out.println("Porcentaje prestados: " + (double) prestados / totalPrestados * 100 + "%");
     }
 
 }

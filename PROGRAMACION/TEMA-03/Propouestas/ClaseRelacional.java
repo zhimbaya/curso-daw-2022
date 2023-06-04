@@ -1,7 +1,8 @@
-package propuesta01;
+package Tema04;
 
 public class ClaseRelacional {
-	/*
+
+    /*
 	 * 3. Actividad UT03-3: Clase Racional.
 	 * 
 	 * Comprueba que la clase siguiente funciona correctamente. Sin embargo, es
@@ -9,47 +10,47 @@ public class ClaseRelacional {
 	 * main está codificado en el mismo fichero fuente, no se especifican
 	 * modificadores de acceso a los miembros de la clase, etc.. Modifica la
 	 * aplicación subsanando los inconvenientes antes indicados.
-	 */
-	
-	private int numerador;
-	private int denominador;
-	
-	public ClaseRelacional(){
-	}
-	
-	public ClaseRelacional(int numerador, int denominador) {
-		super();
-		this.numerador = numerador;
-		this.denominador = denominador;
-	}
+     */
 
-	public int getNumerador() {
-		return numerador;
-	}
+    private int numerador;
+    private int denominador;
 
-	public void setNumerador(int numerador) {
-		this.numerador = numerador;
-	}
+    public ClaseRelacional() {
+    }
 
-	public int getDenominador() {
-		return denominador;
-	}
+    public ClaseRelacional(int numerador, int denominador) {
+        super();
+        this.numerador = numerador;
+        this.denominador = denominador;
+    }
 
-	public void setDenominador(int denominador) {
-		this.denominador = denominador;
-	}
+    public int getNumerador() {
+        return numerador;
+    }
 
-	public void asignarDatos(int num, int den){
+    public void setNumerador(int numerador) {
+        this.numerador = numerador;
+    }
 
-		numerador = num;
-		if (den == 0)
-			den = 1; // el denominador no puede ser cero
-		denominador = den;
-	}
+    public int getDenominador() {
+        return denominador;
+    }
 
-	public void visualizarRacional(){
-		System.out.println(numerador + "/" + denominador);
-	}
+    public void setDenominador(int denominador) {
+        this.denominador = denominador;
+    }
 
+    public void asignarDatos(int num, int den) {
+
+        numerador = num;
+        if (den == 0) {
+            den = 1; // el denominador no puede ser cero
+        }
+        denominador = den;
+    }
+
+    public void visualizarRacional() {
+        System.out.println(numerador + "/" + denominador);
+    }
 
 }
