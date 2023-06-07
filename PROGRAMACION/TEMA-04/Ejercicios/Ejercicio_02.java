@@ -20,6 +20,8 @@ public class Ejercicio_02 {
         } else {
             System.out.println(dividendo + "/" + divisor + "=" + dividendo / divisor);
         }
+        
+        sc.close();
     }
 
 }

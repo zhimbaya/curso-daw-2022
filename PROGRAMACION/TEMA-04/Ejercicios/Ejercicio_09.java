@@ -37,6 +37,7 @@ public class Ejercicio_09 {
             }
         }
         System.out.println("El sueldo total es " + sueldo);
+        sc.close();
     }
 
 }

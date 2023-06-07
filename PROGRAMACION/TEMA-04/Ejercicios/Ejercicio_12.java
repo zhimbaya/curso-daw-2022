@@ -20,7 +20,6 @@ public class Ejercicio_12 {
             if (n > N) {
                 System.out.print(" - ");
             }
-
             System.out.print(n);
             n += N;
         }
@@ -33,8 +32,8 @@ public class Ejercicio_12 {
             }
             System.out.print(i);
         }
+        
         System.out.println();
-
         System.out.println("Multiplos de 8 (cuantas veces contiene el nº 8)");
         for (int i = 1; i <= 500; i++) {
             if (i % 8 == 0) {

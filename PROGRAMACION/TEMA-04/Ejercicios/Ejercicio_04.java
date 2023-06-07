@@ -20,18 +20,19 @@ public class Ejercicio_04 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Escribe la hora (0-23)");
         int hora = sc.nextInt();
-        
+
         System.out.println("Escribe los minutos (0-59)");
         int min = sc.nextInt();
-        
+
         System.out.println("Escribe los segundos (0-59)");
         int seg = sc.nextInt();
-        
+
         if (hora >= 0 && hora < 24 && min >= 0 && min < 59 && seg >= 0 && seg < 59) {
             System.out.println("La hora es correcta");
         } else {
             System.out.println("La hora es incorrecta");
         }
+        sc.close();
     }
 
 }

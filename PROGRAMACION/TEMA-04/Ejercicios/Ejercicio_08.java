@@ -36,6 +36,7 @@ public class Ejercicio_08 {
         } else {
             System.out.println("Fuera de nivel");
         }
+        sc.close();
     }
 
 }

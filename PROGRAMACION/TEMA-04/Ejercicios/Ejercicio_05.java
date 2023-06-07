@@ -10,9 +10,9 @@ public class Ejercicio_05 {
      */
     public static void main(String[] args) {
 
+        System.out.println("Escribe tres números enteros");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Escribe tres números enteros");
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
@@ -28,6 +28,8 @@ public class Ejercicio_05 {
                 }
             }
         }
+        
+        sc.close();
     }
 
 }

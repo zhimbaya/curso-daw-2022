@@ -21,6 +21,7 @@ public class Ejercicio_11 {
         }
         System.out.println("La suma de los " + CANTIDAD + " números es " + suma);
         System.out.println("La media de los " + CANTIDAD + " números es " + (double) suma / CANTIDAD);
+        sc.close();
     }
 
 }

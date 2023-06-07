@@ -16,6 +16,7 @@ public class Ejercicio_01 {
         } else {
             System.out.println("El número es impar");
         }
+        sc.close();
     }
 
 }

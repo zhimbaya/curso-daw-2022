@@ -18,9 +18,8 @@ public class Ejercicio_07 {
      */
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
         System.out.println("Escribe el día de la semana en mínusculas sin acentos");
+        Scanner sc = new Scanner(System.in);
         String dia = sc.nextLine();
 
         // SOLUCiÓN USANDO IF
@@ -67,6 +66,7 @@ public class Ejercicio_07 {
                 System.out.println("Día erróneo");
 
         }
+        sc.close();
 
     }
 
