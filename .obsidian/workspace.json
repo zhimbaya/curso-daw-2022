@@ -16,8 +16,19 @@
                 "file": "ENTORNOS/UT04. Optimización y documentación./4.D.03 Documentación.pdf"
               }
             }
+          },
+          {
+            "id": "45946945f0ed4886",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.4"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -144,21 +155,21 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "31195a4266ebecd7",
+  "active": "45946945f0ed4886",
   "lastOpenFiles": [
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/EntornosDesarrollo_DAM_Ejercicio_Resuelto_4.pdf",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/src/cuentas/Main.java",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/src/cuentas/CCuenta.java",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/src/cuentas",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/src",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/search.js",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/type-search-index.js",
+    "PROGRAMACION/TEMA-01/PREGUNTAS/PREGUNTAS WEB TEMA 1.docx",
+    "PROGRAMACION/TEMA-01/PREGUNTAS/PREGUNTAS WEB.docx",
+    "PROGRAMACION/TEMA-01/PREGUNTAS/~$EGUNTAS PDF TEMA 1.docx",
+    "PROGRAMACION/TEMA-01/PREGUNTAS/PREGUNTAS PDF TEMA 1.docx",
+    "PROGRAMACION/TEMA-01/PREGUNTAS/1.1. Test UT01 Revisión del intento.pdf",
+    "PROGRAMACION/TEMA-01/1.H.02 Netbeans..pdf",
+    "PROGRAMACION/TEMA-01/1.H.01 Netbeans..pdf",
+    "PROGRAMACION/TEMA-01/1.G.02 Eclipse..pdf",
+    "PROGRAMACION/TEMA-01/1.G.01 Eclipse..pdf",
+    "PROGRAMACION/TEMA-01/1.F.03 Introducción al IDE..pdf",
+    "PROGRAMACION/TEMA-01/1.F.02 Introducción al IDE..pdf",
     "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/legal/jqueryUI.md",
     "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/legal/jquery.md",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/legal/LICENSE",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/legal/ASSEMBLY_EXCEPTION",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/legal/ADDITIONAL_LICENSE_INFO",
-    "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/legal",
     "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/script-dir/images/ui-icons_cd0a0a_256x240.png",
     "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/script-dir/images/ui-icons_888888_256x240.png",
     "ENTORNOS/UT04. Optimización y documentación./TAREA/Cuentas/doc/script-dir/images/ui-icons_454545_256x240.png",

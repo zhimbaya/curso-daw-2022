@@ -6,7 +6,7 @@ package Tema10;
  * controlar que el número de parámetros pasados a main es correcto y manejará
  * excepciones de tipo IOException. Si el número de argumentos es correcto,
  * invocará a un método denominado crearFichero(), donde se llevará a cabo la
- * creación del !chero de texto. En caso de que ya exista, le preguntaremos si
+ * creación del fichero de texto. En caso de que ya exista, le preguntaremos si
  * desea sobrescribirlo, validando la respuesta (s/n). Si el número de
  * parámetros no es correcto, lanzará una excepción propia indicando que los
  * parámetros son incorrectos y la sintaxis correcta para ejecutar el programa.
@@ -15,7 +15,6 @@ package Tema10;
  * salida un FileWriter.
  */
 import java.io.*;
-import java.lang.*;
 
 public class CrearFicheroTexto {
 
@@ -24,7 +23,9 @@ public class CrearFicheroTexto {
             if (args.length != 1) {
                 throw new ArgumentosIncorrectos2();
             } else {
+
                 crearFichero(args[0]);
+
             }
         } catch (ArgumentosIncorrectos2 error) {
             System.out.println("El Numero de Argumentos es Incorrecto");
@@ -33,27 +34,29 @@ public class CrearFicheroTexto {
     }
 
     public static void crearFichero(String nomFichero) throws IOException {
-        File fichero = new File(nomFichero);
+        File fichero = null;
         FileWriter flujoSalida = null;
         char respuesta = 's';
-
         try {
+            fichero = new File(nomFichero);
+
             if (fichero.exists()) {
-                System.out.print("El Fichero Ya Existe �Desea Sobreescribirlo? (S/N): ");
+                System.out.println("El Fichero Ya Existe ¿Desea Sobreescribirlo? (S/N): ");
                 respuesta = getRespuesta();
-            }//Fin Si
+            }
 
             if (respuesta == 's') {
                 //Creamos el Flujo de Salida
                 flujoSalida = new FileWriter(fichero);
                 char caracter;
-                char eof = (char) - 1;
-                 System.out.println(eof);
+                char eof = (char) -1;
+                System.out.println(eof);
                 System.out.println("Escribe un Texto. Pulsa Control + Z para Finalizar");
-                while ((caracter = (char) System.in.read()) != eof) {
+                while ((caracter = (char) System.in.read()) != 'f') {
                     flujoSalida.write(caracter);
                 }
             }//Fin Si
+
         }//Fin Try
         catch (IOException error) {
             System.out.println("Error de Entrada y Salida");
@@ -91,3 +94,4 @@ class ArgumentosIncorrectos2 extends Exception {
         super();
     }
 }
+

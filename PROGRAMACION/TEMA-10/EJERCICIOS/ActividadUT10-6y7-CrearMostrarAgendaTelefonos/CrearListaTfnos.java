@@ -23,7 +23,6 @@ public class CrearListaTfnos {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public static char getRespuesta() {
         char respuesta = 's';
         boolean respuestaValida;
@@ -46,7 +45,6 @@ public class CrearListaTfnos {
         return respuesta;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public static void crearFichero(File fichero) {
         char respuesta;
         //Crea un Flujo hacia el Fichero que Permita Escribir Datos en el Fichero
@@ -62,7 +60,7 @@ public class CrearListaTfnos {
                 System.out.println("Introduce el Telefono");
                 dos.writeLong(Leer.datoLong()); //De manera alternativa usar clase Scanner para leer
 
-                System.out.print("Deseas Escribir mas Datos?");
+                System.out.println("Deseas Escribir mas Datos?");
                 respuesta = getRespuesta();
 
             } while (respuesta == 's');

@@ -1,78 +1,79 @@
-
-package ejercicioa0403;
+package Tema03;
 
 public class Libro {
-	// Atributos
-	private String titulo;
-	private String autor;
-	private int ejemplares;
-	private int prestados;
 
-	// Constructores
-	public Libro() {
-	}
+    // Atributos
+    private String titulo;
+    private String autor;
+    private int ejemplares;
+    private int prestados;
 
-	public Libro(String titulo, String autor, int ejemplares, int prestados) {
-		this.titulo = titulo;
-		this.autor = autor;
-		this.ejemplares = ejemplares;
-		this.prestados = prestados;
-	}
+    // Constructores
+    public Libro() {
+    }
 
-	public String getTitulo() {
-		return this.titulo;
-	}
+    public Libro(String titulo, String autor, int ejemplares, int prestados) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ejemplares = ejemplares;
+        this.prestados = prestados;
+    }
 
-	public String getAutor() {
-		return this.autor;
-	}
+    public String getTitulo() {
+        return this.titulo;
+    }
 
-	public int getEjemplares() {
-		return this.ejemplares;
-	}
+    public String getAutor() {
+        return this.autor;
+    }
 
-	public int getPrestados() {
-		return this.prestados;
-	}
+    public int getEjemplares() {
+        return this.ejemplares;
+    }
 
-	public void setTitulo(String t) {
-		this.titulo = t;
-	}
+    public int getPrestados() {
+        return this.prestados;
+    }
 
-	public void setAutor(String a) {
-		this.autor = a;
-	}
+    public void setTitulo(String t) {
+        this.titulo = t;
+    }
 
-	public void setEjemplares(int e) {
-		this.ejemplares = e;
-	}
+    public void setAutor(String a) {
+        this.autor = a;
+    }
 
-	public void setPrestados(int p) {
-		this.prestados = p;
-	}
+    public void setEjemplares(int e) {
+        this.ejemplares = e;
+    }
 
-	public boolean prestamo() {
-		if (this.prestados < this.ejemplares) {
-			this.prestados++;
-			return true;
-		} else {
-			return false;
-		}
-	}
+    public void setPrestados(int p) {
+        this.prestados = p;
+    }
 
-	public boolean devolucion() {
-		if (prestados > 0) {
-			prestados--;
-			return true;
-		} else
-			return false;
-	}
+    public boolean prestamo() {
+        if (this.prestados < this.ejemplares) {
+            this.prestados++;
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-	public void mostrarLibro() {
-		System.out.println("Título: " + titulo);
-		System.out.println("Autor: " + autor);
-		System.out.println("Ejemplares: " + ejemplares);
-		System.out.println("Prestados: " + prestados);
-	}
+    public boolean devolucion() {
+        if (prestados > 0) {
+            prestados--;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void mostrarLibro() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Ejemplares: " + ejemplares);
+        System.out.println("Prestados: " + prestados);
+    }
 
 }

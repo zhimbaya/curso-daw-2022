@@ -1,35 +1,33 @@
-
-package ejercicioa0402;
+package Tema03;
 
 public class Circulo {
 
-	// Atributos
-	private double radio;
-	final double PI = 3.14159;
+    // Atributos
+    private double radio;
 
-	// Constructores
-	public Circulo() {
-		radio = 1;
-	}
+    // Constructores
+    public Circulo() {
+        radio = 1;
+    }
 
-	public Circulo(double r) {
-		radio = r;
-	}
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
 
-	public double getRadio() {
-		return radio;
-	}
+    public double getRadio() {
+        return radio;
+    }
 
-	public void setRadio(double r) {
-		radio = r;
-	}
+    public void setRadio(double r) {
+        radio = r;
+    }
 
-	public double perimetro() {
-		return 2 * PI * radio;
-	}
+    public double perimetro() {
+        return 2 * Math.PI * radio;
+    }
 
-	public double area() {
-		return PI * radio * radio;
-	}
+    public double area() {
+        return Math.PI * radio * radio;
+    }
 
 }

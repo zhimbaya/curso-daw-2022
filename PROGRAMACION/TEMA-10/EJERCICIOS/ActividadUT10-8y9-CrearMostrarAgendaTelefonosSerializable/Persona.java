@@ -1,6 +1,5 @@
 package Tema10;
 
-
 import java.io.*;
 
 public class Persona implements Serializable {

@@ -1,6 +1,5 @@
 package Tema10;
 
-
 import java.io.*;
 
 public class MostrarListaTfnosSerializable {
@@ -8,7 +7,7 @@ public class MostrarListaTfnosSerializable {
     public static void main(String[] args) {
         try {
             if (args.length != 1) {
-                throw new ArgumentosIncorrectos();
+                throw new ArgumentosIncorrectoz();
             } else {
                 File fichero = new File(args[0]);
 
@@ -18,7 +17,7 @@ public class MostrarListaTfnosSerializable {
                     throw new FileNotFoundException();
                 }
             }
-        } catch (ArgumentosIncorrectos error) {
+        } catch (ArgumentosIncorrectoz error) {
             System.out.println("El Numero de Argumentos es Incorrecto");
             System.out.println("Sintaxis: java MostrarListaTfnos nomFichero");
         } catch (FileNotFoundException error) {
@@ -56,9 +55,9 @@ public class MostrarListaTfnosSerializable {
     }
 }
 
-class ArgumentosIncorrectos extends Exception {
+class ArgumentosIncorrectoz extends Exception {
 
-    public ArgumentosIncorrectos() {
+    public ArgumentosIncorrectoz() {
         super();
     }
 }

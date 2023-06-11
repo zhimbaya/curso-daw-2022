@@ -1,7 +1,9 @@
 package Tema10;
 
-/*3)Repite el ejercicio anterior procesando la informaci�n l�nea a l�nea.
- El fuente se puede llamar CrearFicheroTextoLineas.*/
+/**
+ * 3)Repite el ejercicio anterior procesando la informaci�n l�nea a l�nea. El
+ * fuente se puede llamar CrearFicheroTextoLineas.
+ */
 import java.io.*;
 import java.lang.*;
 
@@ -10,22 +12,19 @@ public class CrearFicheroTextoLinea {
     public static void main(String args[]) throws IOException {
         try {
             if (args.length != 1) {
-                throw new ArgumentosIncorrectos();
+                throw new ArgumentosIncorrectos3();
             } else {
                 crearFichero(args[0]);
             }
-        } ////////////////////////////////////////////////////////////////////////
-        catch (ArgumentosIncorrectos error) {
+        } catch (ArgumentosIncorrectos3 error) {
             System.out.println("El Numero de Argumentos es Incorrecto");
-            System.out.println("Sintaxis: java CrearFicheroTexto nomFichero");
+            System.out.println("Sintaxis-- java CrearFicheroTexto nomFichero");
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public static char getRespuesta() {
         char respuesta = 's';
         boolean respuestaValida;
-
         try {
             do {
                 respuesta = (char) System.in.read();
@@ -38,19 +37,18 @@ public class CrearFicheroTextoLinea {
         } catch (IOException error) {
             System.out.println("Error de Entrada/Salida");
         }
-
         return respuesta;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public static void crearFichero(String nomFichero) throws IOException {
-        File fichero = new File(nomFichero);
+        File fichero;
         FileWriter flujoSalida = null;
         char respuesta = 's';
 
         try {
+            fichero = new File(nomFichero);
             if (fichero.exists()) {
-                System.out.print("El Fichero Ya Existe �Desea Sobreescribirlo? (S/N): ");
+                System.out.print("El Fichero Ya Existe Desea Sobreescribirlo? (S/N): ");
                 respuesta = getRespuesta();
             }//Fin Si
 
@@ -76,10 +74,9 @@ public class CrearFicheroTextoLinea {
     }
 }
 
-////////////////////////////////////////////////////////////////////////////////
-class ArgumentosIncorrectos extends Exception {
+class ArgumentosIncorrectos3 extends Exception {
 
-    public ArgumentosIncorrectos() {
+    public ArgumentosIncorrectos3() {
         super();
     }
 }
