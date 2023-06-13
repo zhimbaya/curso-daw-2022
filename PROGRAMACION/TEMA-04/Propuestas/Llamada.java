@@ -1,38 +1,41 @@
-package Propuesta04;
+package Tema04;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Llamada {
 
-			
-	public static void main(String args[]) throws IOException {
-		// Declaracion Variables
-		double coste;
-		int duracion;
-		boolean duracionValida;
-		// Declaracion de constantes
-		final double COSTE_MINUTO = .20;
-		final double COSTE_MINUTO_REDUCIDO = .05;
-		final int DURACION_MINIMA = 3;
-		Scanner teclado = new Scanner(System.in);
+    public static void main(String args[]) throws IOException {
 
-		do {
-			System.out.println("Introduce la duracion de la llamada");
-			duracion = teclado.nextInt();
+        //Declaracion Variables
+        double coste;
+        int duracion;
+        boolean duracionValida;
 
-			duracionValida = (duracion > 0);
-			if (!duracionValida)
-				System.out.println("ERROR, la duracion debe ser mayor que 0");
+        //Declaracion de constantes
+        final double costeMinuto = .20;
+        final double costeMinutoReducido = .05;
+        final int duracionMinima = 3;
 
-		} while (!duracionValida); // fin repetir-mientras
+        Scanner teclado = new Scanner(System.in);
+        do {
+            System.out.println("Introduce la duracion de la llamada");
+            duracion = teclado.nextInt();
 
-		if (duracion <= DURACION_MINIMA)
-			coste = COSTE_MINUTO;
+            duracionValida = (duracion > 0);
+            if (!duracionValida) {
+                System.out.println("ERROR, la duracion debe ser mayor que 0");
+            }
 
-		else
-			coste = COSTE_MINUTO + ((duracion - DURACION_MINIMA) * COSTE_MINUTO_REDUCIDO);
+        } while (!duracionValida); //fin repetir-mientras
 
-		System.out.println("El coste de la llamada es de: " + coste + " euros");
-	}// fin main
-}// fin class
+        if (duracion <= duracionMinima) {
+            coste = costeMinuto;
+        } else {
+            coste = (costeMinuto + (duracion - duracionMinima) * costeMinutoReducido);
+        }
+
+        System.out.println("El coste de la llamada es de: " + coste + " euros");
+    }//fin main
+}//fin class	
+

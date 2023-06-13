@@ -1,104 +1,103 @@
-
+package Tema05;
 
 import java.lang.String;
 import java.lang.System;
 import java.util.Scanner;
 
-public class PruebaLibro {
+public class PruebaLibro2 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        Scanner sc = new Scanner(System.in);
         String titulo, autor;
-        int  codigo, numEjemplares, numEjemplaresPrestados;
+        int codigo, numEjemplares, numEjemplaresPrestados;
 
-        //Creamos el objeto libro1 utilizando el constructor con parámetros
-        Libro libro1 = new Libro("La forja de un rebelde", "Arturo Barea", 1001, 2, 0);
+        //Creamos el objeto libro1 utilizando el constructor con parï¿½metros
+        Libro2 libro1 = new Libro2("La forja de un rebelde", "Arturo Barea", 1001, 2, 0);
         //Creamos el objeto libro2 utilizando el constructor por defecto
-        Libro libro2 = new Libro();
+        Libro2 libro2 = new Libro2();
 
         System.out.print("Introduce titulo del libro: ");
         titulo = sc.nextLine();
         System.out.print("Introduce autor del libro: ");
         autor = sc.nextLine();
-        System.out.print("Introduce código del libro: ");
+        System.out.print("Introduce cï¿½digo del libro: ");
         codigo = sc.nextInt();
-        System.out.print("Introduce número de ejemplares del libro: ");
+        System.out.print("Introduce nï¿½mero de ejemplares del libro: ");
         numEjemplares = sc.nextInt();
-        System.out.print("Introduce número de ejemplares prestados del libro: ");
+        System.out.print("Introduce nï¿½mero de ejemplares prestados del libro: ");
         numEjemplaresPrestados = sc.nextInt();
 
-        //Cargamos en libro2 los datos leídos de teclado mediante los métodos setters
+        //Cargamos en libro2 los datos leï¿½dos de teclado mediante los mï¿½todos setters
         libro2.setTitulo(titulo);
         libro2.setAutor(autor);
         libro2.setCodigo(codigo);
         libro2.setNumEjemplares(numEjemplares);
         libro2.setNumEjemplaresPrestados(numEjemplaresPrestados);
-        
-        //Mostramos por pantalla los datos (atributos) del objeto libro1 mediante los métodos getters 
+
+        //Mostramos por pantalla los datos (atributos) del objeto libro1 mediante los mï¿½todos getters 
         System.out.println("Libro 1:");
         System.out.println("Titulo: " + libro1.getTitulo());
         System.out.println("Autor: " + libro1.getAutor());
-        System.out.println("Código: " + libro1.getCodigo());
-        System.out.println("Número de ejemplares: " + libro1.getNumEjemplares());
-        System.out.println("Número de ejemplares prestados");
+        System.out.println("Cï¿½digo: " + libro1.getCodigo());
+        System.out.println("Nï¿½mero de ejemplares: " + libro1.getNumEjemplares());
+        System.out.println("Nï¿½mero de ejemplares prestados");
         System.out.println("=======================================");
 
-        //Prestamos el libro1. El método devolverá true si se ha podido realizar el préstamo y false en caso contrario
+        //Prestamos el libro1. El mï¿½todo devolverï¿½ true si se ha podido realizar el prï¿½stamo y false en caso contrario
         if (libro1.prestar()) {
-            System.out.println("Se ha prestado el libro '" + libro1.getTitulo() +"' exitosamente");
+            System.out.println("Se ha prestado el libro '" + libro1.getTitulo() + "' exitosamente");
         } else {
             System.out.println("No se ha podido prestar el libro '" + libro1.getTitulo() + "' . Se encuentra ya prestado");
         }
 
-        //Devolvemos el libro1. El método devolverá true si se ha podido realizar la devolución y false en caso contrario
+        //Devolvemos el libro1. El mï¿½todo devolverï¿½ true si se ha podido realizar la devoluciï¿½n y false en caso contrario
         if (libro1.devolver()) {
             System.out.println("Se ha devuelto el libro '" + libro1.getTitulo() + "'");
         } else {
             System.out.println("No hay ejemplar del libro '" + libro1.getTitulo() + "' prestado");
         }
 
-        //Prestamos de nuevo el libro1 (Aquí quedará uno de los 2 disponibles)
+        //Prestamos de nuevo el libro1 (Aquï¿½ quedarï¿½ uno de los 2 disponibles)
         if (libro1.prestar()) {
             System.out.println("Se ha prestado el libro " + libro1.getTitulo());
         } else {
             System.out.println("No quedan ejemplares del libro '" + libro1.getTitulo() + "' para prestar");
         }
 
-        //Prestamos de nuevo el libro1 (Aquí ya no quedarña ninguno disponible)
+        //Prestamos de nuevo el libro1 (Aquï¿½ ya no quedarï¿½a ninguno disponible)
         if (libro1.prestar()) {
             System.out.println("Se ha prestado el libro '" + libro1.getTitulo() + "'");
         } else {
             System.out.println("No queda ejemplar del libro '" + libro1.getTitulo() + "' para prestar");
-        } 
-        
-        //Prestamos de nuevo el libro1 (Aquí debe decir que ya está prestado)
+        }
+
+        //Prestamos de nuevo el libro1 (Aquï¿½ debe decir que ya estï¿½ prestado)
         if (libro1.prestar()) {
             System.out.println("Se ha prestado el libro '" + libro1.getTitulo() + "'");
         } else {
             System.out.println("No queda ejemplar del libro '" + libro1.getTitulo() + "' para prestar");
-        } 
-        
+        }
+
         System.out.println("=======================================");
         //mostramos los datos del libro1
         System.out.println("Libro 1:");
         System.out.println("Titulo: " + libro1.getTitulo());
         System.out.println("Autor: " + libro1.getAutor());
-        System.out.println("Código: " + libro1.getCodigo());
-        System.out.println("Número de ejemplares: " + libro1.getNumEjemplares());
-        System.out.println("Número de ejemplares disponibles: " + (libro1.getNumEjemplares()-libro1.getNumEjemplaresPrestados()));
+        System.out.println("Cï¿½digo: " + libro1.getCodigo());
+        System.out.println("Nï¿½mero de ejemplares: " + libro1.getNumEjemplares());
+        System.out.println("Nï¿½mero de ejemplares disponibles: " + (libro1.getNumEjemplares() - libro1.getNumEjemplaresPrestados()));
         System.out.println("=======================================");
 
         //mostrar los datos del libro2
         System.out.println("Libro 2:");
         System.out.println("Titulo: " + libro2.getTitulo());
         System.out.println("Autor: " + libro2.getAutor());
-        System.out.println("Código: " + libro2.getCodigo());
-        System.out.println("Número de ejemplares: " + libro2.getNumEjemplares());
-        System.out.println("Número de ejemplares disponibles: " + (libro2.getNumEjemplares()-libro2.getNumEjemplaresPrestados()));
+        System.out.println("Cï¿½digo: " + libro2.getCodigo());
+        System.out.println("Nï¿½mero de ejemplares: " + libro2.getNumEjemplares());
+        System.out.println("Nï¿½mero de ejemplares disponibles: " + (libro2.getNumEjemplares() - libro2.getNumEjemplaresPrestados()));
 
-
-	}
+    }
 
 }
