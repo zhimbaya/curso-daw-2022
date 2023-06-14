@@ -86,7 +86,7 @@ public class PruebaLibro {
         System.out.println("Autor: " + libro2.getAutor());
         System.out.println("Código: " + libro2.getCodigo());
         System.out.println("Prestado: " + (libro2.getPrestado() ? "SI" : "No"));
-
+        sc.close();
     }
 
 }

@@ -97,7 +97,7 @@ public class PruebaLibro2 {
         System.out.println("C�digo: " + libro2.getCodigo());
         System.out.println("N�mero de ejemplares: " + libro2.getNumEjemplares());
         System.out.println("N�mero de ejemplares disponibles: " + (libro2.getNumEjemplares() - libro2.getNumEjemplaresPrestados()));
-
+        sc.close();
     }
 
 }
