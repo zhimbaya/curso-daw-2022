@@ -1,10 +1,11 @@
+package Tema07.SOLUCION;
 
 import java.io.*;
 import java.util.*;
 
 public abstract class CCuenta {
-    //Miembros dato
 
+    //Miembros dato
     private String nombreTitular;
     private String numCuenta;
     private double saldo;
@@ -14,8 +15,8 @@ public abstract class CCuenta {
     public CCuenta(String nombreTitular, String numCuenta, double saldo, double tipoInteres) {
         this.nombreTitular = nombreTitular;
         this.numCuenta = numCuenta;
-        ingreso(saldo);
         this.tipoInteres = tipoInteres;
+        ingreso(saldo);
     }
 
     public CCuenta() {
@@ -51,10 +52,8 @@ public abstract class CCuenta {
         return saldo;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public abstract void comisiones();
 
-    ////////////////////////////////////////////////////////////////////////////
     public void ingreso(double cantidad) {
         if (cantidad <= 0) {
             System.out.println("La Cantidad a Ingresar debe ser > 0");
@@ -63,7 +62,6 @@ public abstract class CCuenta {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void reintegro(double cantidad) {
         if (cantidad > saldo) {
             System.out.println("El Saldo que hay en su Cuenta no es suficiente");
@@ -72,7 +70,6 @@ public abstract class CCuenta {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public abstract double intereses();
 
 }

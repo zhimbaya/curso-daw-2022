@@ -1,3 +1,4 @@
+package Tema07.SOLUCION;
 
 import java.io.*;
 import java.util.*;
@@ -12,20 +13,18 @@ public class CCuentaCorriente extends CCuenta {
     //Constructores
     public CCuentaCorriente(String nombreTitular, String numCuenta, double saldo, double tipoInteres, int transacciones, double importePorTrans, int transExentas) {
         super(nombreTitular, numCuenta, saldo, tipoInteres);
-        transacciones = 0;
         this.importePorTrans = importePorTrans;
         this.transExentas = transExentas;
+        transacciones = 0;
     }
 
     public CCuentaCorriente() {
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void decrementarTransacciones() {
         transacciones--;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void setTransacciones(int transacciones) {
         this.transacciones = transacciones;
     }
@@ -34,7 +33,6 @@ public class CCuentaCorriente extends CCuenta {
         return transacciones;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void setImportePorTrans(double importePorTrans) {
         this.importePorTrans = importePorTrans;
     }
@@ -43,7 +41,6 @@ public class CCuentaCorriente extends CCuenta {
         return importePorTrans;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void setTransExentas(double TransExentas) {
         this.transExentas = transExentas;
     }
@@ -52,19 +49,18 @@ public class CCuentaCorriente extends CCuenta {
         return transExentas;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
+    @Override
     public void ingreso(double cantidad) {
         super.ingreso(cantidad);
         transacciones++;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
+    @Override
     public void reintegro(double cantidad) {
         super.reintegro(cantidad);
         transacciones++;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void comisiones() {
         GregorianCalendar fecha = new GregorianCalendar();
         int dia = fecha.get(Calendar.DAY_OF_MONTH);
@@ -77,7 +73,6 @@ public class CCuentaCorriente extends CCuenta {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public double intereses() {
         GregorianCalendar fecha = new GregorianCalendar();
         int dia = fecha.get(Calendar.DAY_OF_MONTH);

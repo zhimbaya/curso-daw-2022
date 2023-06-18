@@ -1,3 +1,4 @@
+package Tema07.SOLUCION;
 
 import java.io.*;
 import java.util.*;
@@ -16,7 +17,6 @@ public class CCuentaAhorro extends CCuenta {
     public CCuentaAhorro() {
     }
 
-    ////////////////////////////////////////////////////////////////////////////
     public void setCuotaMantenimiento(double cuotaMantenimiento) {
         this.cuotaMantenimiento = cuotaMantenimiento;
     }
@@ -25,7 +25,7 @@ public class CCuentaAhorro extends CCuenta {
         return cuotaMantenimiento;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
+    @Override
     public void comisiones() {
         GregorianCalendar fecha = new GregorianCalendar();
         int dia = fecha.get(Calendar.DAY_OF_MONTH);
@@ -35,7 +35,7 @@ public class CCuentaAhorro extends CCuenta {
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////
+    @Override
     public double intereses() {
         GregorianCalendar fecha = new GregorianCalendar();
         int dia = fecha.get(Calendar.DAY_OF_MONTH);

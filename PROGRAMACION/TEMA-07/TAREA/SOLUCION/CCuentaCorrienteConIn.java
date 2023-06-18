@@ -1,3 +1,4 @@
+package Tema07.SOLUCION;
 
 import java.io.*;
 import java.util.*;
@@ -11,6 +12,7 @@ public class CCuentaCorrienteConIn extends CCuentaCorriente {
     public CCuentaCorrienteConIn() {
     }
 
+    @Override
     public double intereses() {
         GregorianCalendar fecha = new GregorianCalendar();
         int dia = fecha.get(Calendar.DAY_OF_MONTH);

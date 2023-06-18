@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Tema07;
 
 import java.text.SimpleDateFormat;
@@ -14,7 +10,7 @@ import java.util.Hashtable;
  *
  * @author diego
  */
-public abstract class Persona implements Imprimible {
+public abstract class _01Persona implements _01Imprimible {
 
     protected String nombre;
     protected String apellidos;
@@ -58,7 +54,7 @@ public abstract class Persona implements Imprimible {
         System.out.printf("Fecha de nacimiento: %s\n", Stringfecha);
     }
 
-    public Persona(String nombre, String apellidos, GregorianCalendar fechaNacim) {
+    public _01Persona(String nombre, String apellidos, GregorianCalendar fechaNacim) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNacim = fechaNacim;
@@ -68,7 +64,15 @@ public abstract class Persona implements Imprimible {
     // Método abstracto
     protected abstract void mostrar2();
 
+    // Método devolverContenidoString
+    @Override
+    public String devolverContenidoString() {
+        String contenido = _01Persona.HashtableToString(this.devolverContenidoHashtable());
+        return contenido;
+    }
+
     // Método devolverContenidoHashtable
+    @Override
     public Hashtable devolverContenidoHashtable() {
         // Creamos la Hashtable que va a ser devuelta 
         Hashtable contenido = new Hashtable();
@@ -83,6 +87,7 @@ public abstract class Persona implements Imprimible {
     }
 
     // Método devolverContenidoArrayList
+    @Override
     public ArrayList devolverContenidoArrayList() {
         ArrayList contenido = new ArrayList();
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
@@ -93,13 +98,7 @@ public abstract class Persona implements Imprimible {
         return contenido;
     }
 
-    // Método devolverContenidoString
-    public String devolverContenidoString() {
-        String contenido = Persona.HashtableToString(this.devolverContenidoHashtable());
-        return contenido;
-    }
     // Método HashtableToString
-
     protected static String HashtableToString(Hashtable tabla) {
         String contenido;
         String clave;

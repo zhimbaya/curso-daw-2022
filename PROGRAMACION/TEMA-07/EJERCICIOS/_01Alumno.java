@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Tema07;
 
 import java.text.SimpleDateFormat;
@@ -13,7 +9,7 @@ import java.util.Hashtable;
  *
  * @author diego
  */
-public class Alumno extends Persona {
+public class _01Alumno extends _01Persona {
 
     protected String grupo;
     protected double notaMedia;
@@ -51,12 +47,19 @@ public class Alumno extends Persona {
         System.out.printf("Nota media: %5.2f\n", this.notaMedia);
     }
 
-    public Alumno(String nombre, String apellidos, GregorianCalendar fechaNacim, String grupo, double notaMedia) {
+    public _01Alumno(String nombre, String apellidos, GregorianCalendar fechaNacim, String grupo, double notaMedia) {
         super(nombre, apellidos, fechaNacim);
         this.grupo = grupo;
         this.notaMedia = notaMedia;
     }
 
+    public _01Alumno(String nombre, String apellidos, GregorianCalendar fechaNacim) {
+        super(nombre, apellidos, fechaNacim);
+        this.grupo = "GEN";
+        this.notaMedia = 0;
+    }
+
+    @Override
     public void mostrar2() {
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
         String stringFecha = formatoFecha.format(this.fechaNacim.getTime());
@@ -93,9 +96,10 @@ public class Alumno extends Persona {
     }
 
     // Método devolverContenidoString @Override
+    @Override
     public String devolverContenidoString() {
         // Aprovechamos el método estático para transformar una Hashtable en String
-        String contenido = Persona.HashtableToString(this.devolverContenidoHashtable());
+        String contenido = _01Persona.HashtableToString(this.devolverContenidoHashtable());
         // Devolvemos el String creado.
         return contenido;
     }

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Tema07;
 
 import java.text.SimpleDateFormat;
@@ -13,7 +9,7 @@ import java.util.Hashtable;
  *
  * @author diego
  */
-public class Profesor extends Persona {
+public class _01Profesor extends _01Persona {
 
     String especialidad;
     double salario;
@@ -43,6 +39,7 @@ public class Profesor extends Persona {
         return "Profesor: " + this.nombre;
     }
 
+    @Override
     public void mostrar() {
         super.mostrar(); // Llamada al método “mostrar” de la superclase
         // A continuación mostramos la información “especializada” de esta subclase 
@@ -50,10 +47,16 @@ public class Profesor extends Persona {
         System.out.printf("Salario: %7.2f euros\n", this.salario);
     }
 
-    public Profesor(String nombre, String apellidos, GregorianCalendar fechaNacim, String especialidad, double salario) {
+    public _01Profesor(String nombre, String apellidos, GregorianCalendar fechaNacim, String especialidad, double salario) {
         super(nombre, apellidos, fechaNacim);
         this.especialidad = especialidad;
         this.salario = salario;
+    }
+
+    public _01Profesor(String nombre, String apellidos, GregorianCalendar fechaNacim) {
+        super(nombre, apellidos, fechaNacim);
+        // Valores por omisión para un profesor: especialidad "GEN" y sueldo de 1000 euros. this.especialidad= "GEN";
+        this.salario = 1000;
     }
 
     @Override
@@ -66,25 +69,25 @@ public class Profesor extends Persona {
         System.out.printf("Especialidad: %s\n", this.especialidad);
         System.out.printf("Salario: %7.2f euros\n", this.salario);
     }
-    
+
     @Override
-    public Hashtable devolverContenidoHashtable(){
+    public Hashtable devolverContenidoHashtable() {
         Hashtable contenido = super.devolverContenidoHashtable();
         contenido.put("especialidad", this.especialidad);
         contenido.put("salario", this.salario);
         return contenido;
     }
-    
+
     @Override
-    public ArrayList devolverContenidoArrayList(){
+    public ArrayList devolverContenidoArrayList() {
         ArrayList contenido = super.devolverContenidoArrayList();
         contenido.add(this.especialidad);
         contenido.add(this.salario);
         return contenido;
     }
-    
+
     @Override
-    public String devolverContenidoString(){
+    public String devolverContenidoString() {
         String contenido = super.devolverContenidoString();
         return contenido;
     }
