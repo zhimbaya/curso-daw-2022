@@ -6,7 +6,7 @@ package Tema08;
  * @author nombre del autor
  * @version 1.0
  */
-public class ClaseEjemploJavadoc {
+public class _09ClaseEjemploJavadoc {
 
     /**
      * atributo1 sirve para lo que sea
@@ -20,7 +20,7 @@ public class ClaseEjemploJavadoc {
      * @param atributo1 Descripción del primer parámetro
      * @param atributo2 Descripción del segundo parámetro
      */
-    ClaseEjemploJavadoc(String atributo1, int atributo2) {
+    _09ClaseEjemploJavadoc(String atributo1, int atributo2) {
         this.atributo1 = atributo1;
         this.atributo2 = atributo2;
     }
