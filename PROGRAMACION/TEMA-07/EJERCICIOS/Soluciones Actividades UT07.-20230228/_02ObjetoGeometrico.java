@@ -1,16 +1,19 @@
-abstract class ObjetoGeometrico
-{
-  private String nombre;
-  public ObjetoGeometrico(String nom)
-  {
-    nombre = nom;
-  }
+package Tema07.Ejercicios;
 
-  abstract public double calcularArea();
-  abstract public double calcularPerimetro();
+abstract class _02ObjetoGeometrico {
 
-  public String toString()
-  {
-    return nombre;
-  }
+    private String nombre;
+
+    public _02ObjetoGeometrico(String nom) {
+        nombre = nom;
+    }
+
+    abstract public double calcularArea();
+
+    abstract public double calcularPerimetro();
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }

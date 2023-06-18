@@ -1,32 +1,34 @@
-public class Circulo extends ObjetoGeometrico
-{
-  private double radio;
+package Tema07.Ejercicios;
 
-  public Circulo(double r, String nom)
-  {
-    super(nom);
-    radio = r;
-  }
+public class _02Circulo extends _02ObjetoGeometrico {
 
-  public Circulo()
-  {
-    this(1.0, "CÌrculo est·ndar");
-  }
+    private double radio;
 
-  public double devolverRadio()
-  {
-    return radio;
-  }
-  public double calcularArea()
-  {
-    return radio * radio * Math.PI;
-  }
-  public double calcularPerimetro()
-  {
-    return 2 * Math.PI * radio; 
-  }
-  public String toString()
-  {
-    return "Nombre = "+ super.toString() +"  radio = " + radio;
-  }
+    public _02Circulo(double r, String nom) {
+        super(nom);
+        radio = r;
+    }
+
+    public _02Circulo() {
+        this(1.0, "C√≠rculo est√°ndar");
+    }
+
+    public double devolverRadio() {
+        return radio;
+    }
+
+    @Override
+    public double calcularArea() {
+        return radio * radio * Math.PI;
+    }
+
+    @Override
+    public double calcularPerimetro() {
+        return 2 * Math.PI * radio;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre = " + super.toString() + "  radio = " + radio;
+    }
 }
